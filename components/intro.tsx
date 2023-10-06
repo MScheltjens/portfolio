@@ -38,7 +38,7 @@ export const Intro = () => {
         <span className="font-bold">Full-Stack developer</span> creating pleasing and practical <span className="italic">user interfaces</span> with <span className="font-bold">React and Next.js</span>
       </motion.h1>
 
-      <motion.div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 mt-5 text-large font-medium" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+      <motion.div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 mt-5 text-large font-medium" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}>
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"

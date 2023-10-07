@@ -6,8 +6,9 @@ import { useRef } from 'react';
 
 import { PROJECTS } from '@/lib/data';
 import gismo from '@/public/gismo.jpeg';
+import { TProject } from '@/types';
 
-export const Project = ({ title, description, imgUrl, tags }: (typeof PROJECTS)[number]) => {
+export const Project = ({ title, description, imgUrl, tags }:TProject) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

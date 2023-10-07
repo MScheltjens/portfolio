@@ -11,46 +11,41 @@ export const LINKS = [
 
 // projects
 
-export const Projects = [
+export const PROJECTS = [
   {
     title: 'Stad Antwerpen',
-    description: '',
-    tags: [],
-    links: [],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto repellendus illo earum illum ea quibusdam labore impedit incidunt maiores!',
+    tags: ['Next.js', 'React', 'TypeScript', 'Jest', 'CSS-modules', 'redux', 'Next-auth'],
     imgUrl: '',
   },
   {
     title: 'DRG Supermarkten',
-    description: '',
-    tags: [],
-    links: [],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto repellendus illo earum illum ea quibusdam labore impedit incidunt maiores!',
+    tags: ['React.js', 'TypeScript', 'Vite', 'React-Query', 'styled-components', 'Zustand', 'React-query'],
     imgUrl: '',
   },
   {
     title: "Tour d'icapps",
-    description: '',
-    tags: [],
-    links: [],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto repellendus illo earum illum ea quibusdam labore impedit incidunt maiores!',
+    tags: ['React.js', 'Firebase', 'TypeScript', 'React-hook-form', 'React-query'],
     imgUrl: '',
   },
   {
     title: 'VDAB - rijbewijs proefexamen',
-    description: '',
-    tags: [],
-    links: [],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto repellendus illo earum illum ea quibusdam labore impedit incidunt maiores!',
+    tags: ['React.js', 'TypeScript', 'Redux', 'React-Query'],
     imgUrl: '',
   },
   {
     title: 'NRJ Travel',
-    description: '',
-    tags: [],
-    links: [],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto repellendus illo earum illum ea quibusdam labore impedit incidunt maiores!',
+    tags: ['Next.js', 'React', 'TypeScript', 'SCSS', 'React-Query', 'Next-auth', 'React-hook-form', 'Zod'],
     imgUrl: '',
   },
   {
-    title: 'Lab Gismo',
-    description: '',
-    tags: [],
+    title: 'Lab Gizmo',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto repellendus illo earum illum ea quibusdam labore impedit incidunt maiores!',
+    tags: ['Nextjs', 'React', 'TypeScript', 'TailwindCSS', 'Next-auth', 'React-hook-form', 'Zod', 'Zustand', 'Server-actions'],
     imgUrl: '',
   },
 ] as const;

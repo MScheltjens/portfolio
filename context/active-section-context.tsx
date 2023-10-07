@@ -1,7 +1,8 @@
 'use client';
 
+import { createContext, Dispatch, PropsWithChildren, SetStateAction, useContext, useState } from 'react';
+
 import { TSectionName } from '@/types';
-import React, { Dispatch, PropsWithChildren, SetStateAction, createContext, use, useContext, useState } from 'react';
 
 type TActiveSectionContext = {
   activeSection: TSectionName | null;

@@ -49,3 +49,28 @@ export const PROJECTS = [
     imgUrl: '',
   },
 ] as const;
+
+export const SKILLS = [
+  'HTML',
+  'CSS',
+  'SCSS',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Next.js',
+  'Node.js',
+  'Git',
+  'Tailwind',
+  'Prisma',
+  'PostgreSQL',
+  'Redux',
+  'Express',
+  'Framer Motion',
+  'AuthO',
+  'Zod',
+  'React-hook-form',
+  'React-query',
+  'Jest',
+  'React-testing-library',
+  'Next.js Server-actions',
+] as const;

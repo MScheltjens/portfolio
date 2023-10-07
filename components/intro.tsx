@@ -11,7 +11,7 @@ import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from '@/hooks/useSectionInView';
 
 export const Intro = () => {
-  const { ref } = useSectionInView('home');
+  const { ref } = useSectionInView('home', 0.5);
   return (
     <section id='home' ref={ref} className='mb-28 h-screen scroll-mt-[100rem] pt-24 text-center sm:pt-32'>
       <div className='flex h-full w-full flex-col items-center justify-around'>

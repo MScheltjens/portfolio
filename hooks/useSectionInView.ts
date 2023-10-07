@@ -1,17 +1,23 @@
-import { useActiveSectionContext } from '@/context/active-section-context';
-import { TSectionName } from '@/types';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-export const useSectionInView = (sectionName: TSectionName) => {
-  //TODO: threshold not working for projects...
-  const { ref, inView } = useInView();
+import { useActiveSectionContext } from '@/context/active-section-context';
+import type { TSectionName } from '@/types';
+
+export function useSectionInView(sectionName: TSectionName, threshold = 0.75) {
+  const { ref, inView } = useInView({
+    threshold,
+  });
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(sectionName);
     }
-  }, [setActiveSection, inView, sectionName, timeOfLastClick]);
+    console.log(sectionName);
+  }, [inView, setActiveSection, timeOfLastClick, sectionName]);
 
-  return { ref };
-};
+  return {
+    ref,
+  };
+}

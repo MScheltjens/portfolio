@@ -1,10 +1,11 @@
 'use client';
 
-import { PROJECTS } from '@/lib/data';
-import gismo from '@/public/gismo.jpeg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
+
+import { PROJECTS } from '@/lib/data';
+import gismo from '@/public/gismo.jpeg';
 
 export const Project = ({ title, description, imgUrl, tags }: (typeof PROJECTS)[number]) => {
   const ref = useRef<HTMLDivElement>(null);

@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { LINKS } from '@/lib/data';
 import { cn } from '@/utils/cn';
-import { useState } from 'react';
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');

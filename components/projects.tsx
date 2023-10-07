@@ -1,7 +1,9 @@
 import React from 'react';
-import { SectionHeading } from './section-heading';
+
 import { PROJECTS } from '@/lib/data';
+
 import { Project } from './project';
+import { SectionHeading } from './section-heading';
 
 export const Projects = () => (
   <section id='projects' className='scroll-mt-28 mb-28'>

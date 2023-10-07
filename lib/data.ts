@@ -1,12 +1,12 @@
 // internal links
 
 export const LINKS = [
-  { name: 'Home', hash: '#home' },
-  { name: 'About', hash: '#about' },
-  { name: 'Projects', hash: '#projects' },
-  { name: 'Skills', hash: '#skills' },
-  { name: 'Contact', hash: '#contact' },
-  { name: 'Experience', hash: '#experience' },
+  { name: 'home', hash: '#home' },
+  { name: 'about', hash: '#about' },
+  { name: 'projects', hash: '#projects' },
+  { name: 'skills', hash: '#skills' },
+  { name: 'contact', hash: '#contact' },
+  { name: 'experience', hash: '#experience' },
 ] as const;
 
 // projects

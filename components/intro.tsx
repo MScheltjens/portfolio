@@ -56,7 +56,7 @@ export const Intro = () => (
         </Link>
 
         <a
-          className='group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 hover:border hover:border-black/10 focus:scale-110 active:scale-105 dark:bg-white/10'
+          className='group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 hover:outline hover:outline-1 hover:outline-offset-0 hover:outline-black/10 focus:scale-110 active:scale-105 dark:bg-white/10'
           href='/FSD-Mathias-Scheltjens.pdf'
           download
         >
@@ -64,7 +64,7 @@ export const Intro = () => (
         </a>
         <div className='flex gap-2'>
           <a
-            className='flex cursor-pointer  items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:border hover:border-black/10 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60'
+            className='flex cursor-pointer  items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:outline hover:outline-1 hover:outline-offset-0 hover:outline-black/10 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60'
             href='https://linkedin.com/in/mathias-scheltjens'
             target='_blank'
           >
@@ -72,7 +72,7 @@ export const Intro = () => (
           </a>
 
           <a
-            className='flex cursor-pointer  items-center gap-2 rounded-full bg-white p-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:border hover:border-black/10 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60'
+            className='flex cursor-pointer  items-center gap-2 rounded-full bg-white p-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:outline hover:outline-1 hover:outline-offset-0 hover:outline-black/10 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60'
             href='https://github.com/MScheltjens'
             target='_blank'
           >

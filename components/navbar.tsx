@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { LINKS } from '@/lib/data';
@@ -9,6 +10,9 @@ import { cn } from '@/utils/cn';
 
 export const Navbar = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  useEffect(() => {
+    console.log('navbar', activeSection);
+  }, [activeSection]);
 
   return (
     <nav className='fixed left-1/2 top-[0.15rem] flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0'>

@@ -1,29 +1,27 @@
-
 'use client';
 
-
 import { TSectionName } from '@/types';
-import React, { Dispatch, PropsWithChildren, SetStateAction, createContext, useContext, useState } from 'react'
-
+import React, { Dispatch, PropsWithChildren, SetStateAction, createContext, use, useContext, useState } from 'react';
 
 type TActiveSectionContext = {
   activeSection: TSectionName | null;
   setActiveSection: Dispatch<SetStateAction<TSectionName>>;
+  timeOfLastClick: number;
+  setTimeOfLastClick: Dispatch<SetStateAction<number>>;
 };
 
 const ActiveSectionContext = createContext<TActiveSectionContext>({
-    activeSection: 'home',
-    setActiveSection: () => {}
+  activeSection: 'home',
+  setActiveSection: () => {},
+  timeOfLastClick: 0,
+  setTimeOfLastClick: () => {},
 });
 
+export const ActiveSectionProvider = ({ children }: PropsWithChildren) => {
+  const [activeSection, setActiveSection] = useState<TSectionName>('home');
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
-export const ActiveSectionProvider = ({children}: PropsWithChildren) => {
-    const [activeSection, setActiveSection] = useState<TSectionName>('home');
+  return <ActiveSectionContext.Provider value={{ activeSection, setActiveSection, timeOfLastClick, setTimeOfLastClick }}>{children}</ActiveSectionContext.Provider>;
+};
 
-  return (
-    <ActiveSectionContext.Provider value={{activeSection, setActiveSection}}>{children}</ActiveSectionContext.Provider>
-  )
-}
-
-export const useActiveSectionContext = () => useContext(ActiveSectionContext)
-
+export const useActiveSectionContext = () => useContext(ActiveSectionContext);

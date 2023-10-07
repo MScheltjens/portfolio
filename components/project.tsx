@@ -4,11 +4,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-import { PROJECTS } from '@/lib/data';
 import gismo from '@/public/gismo.jpeg';
 import { TProject } from '@/types';
 
-export const Project = ({ title, description, imgUrl, tags }:TProject) => {
+export const Project = ({ title, description, imgUrl, tags }: TProject) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

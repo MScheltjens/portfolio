@@ -4,7 +4,7 @@ import { PROJECTS } from '@/lib/data';
 import { Project } from './project';
 
 export const Projects = () => (
-  <section id='projects' className='mb-28'>
+  <section id='projects' className='scroll-mt-28 mb-28'>
     <SectionHeading>Projects</SectionHeading>
     <div className='mt-12'>
       {PROJECTS.map((project, i) => (

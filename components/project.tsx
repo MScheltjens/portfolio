@@ -2,7 +2,7 @@
 
 import { PROJECTS } from '@/lib/data';
 import gismo from '@/public/gismo.jpeg';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -12,9 +12,11 @@ export const Project = ({ title, description, imgUrl, tags }: (typeof PROJECTS)[
     target: ref,
     offset: ['0 1', '1.33 1'],
   });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.div ref={ref} style={{scale: scrollYProgress, opacity:scrollYProgress}} className='group mb-3 last:mb-0 sm:mb-8'>
+    <motion.div ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress }} className='group mb-3 last:mb-0 sm:mb-8'>
       <section className='relative overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:h-[22rem] sm:pr-8 sm:group-even:pl-8'>
         <div className='flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]'>
           <h3 className='text-2xl font-semibold'>{title}</h3>

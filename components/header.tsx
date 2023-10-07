@@ -1,7 +1,6 @@
 'use client';
-import { LINKS } from '@/lib/data';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+
 import { Navbar } from './navbar';
 
 export const Header = () => (

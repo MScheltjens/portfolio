@@ -1,12 +1,12 @@
 'use client';
 
-import Image from 'next/image';
-import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
+import { HiDownload } from 'react-icons/hi';
 
 export const Intro = () => (
   <section id="home" className="max-w-[50rem] text-center scroll-mt-[100rem] pt-24 sm:pt-32 h-screen">

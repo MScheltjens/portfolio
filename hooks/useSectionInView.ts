@@ -16,12 +16,7 @@ export const useSectionInView = (sectionName: TSectionName, threshold = 0.75) =>
     }
   }, [inView, setActiveSection, timeOfLastClick, sectionName]);
 
-  useEffect(() => {
-    console.log('useSectionInView', sectionName);
-  }, [sectionName]);
-
   return {
     ref,
-    inView,
   };
 };

@@ -14,8 +14,8 @@ export const Experience = () => {
   const { ref } = useSectionInView('experience');
 
   return (
-    <section id='experience' ref={ref} className='mb-28 w-full scroll-mt-28 sm:mb-40'>
-      <SectionHeading>My experience</SectionHeading>
+    <section id='experience' ref={ref} className='w-full scroll-mt-28'>
+      <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor='' animate={true}>
         {EXPERIENCE.map(({ title, location, description, icon, date, type }) => (
           <React.Fragment key={title}>

@@ -5,3 +5,7 @@
 html {
   --line-color: #e5e7eb;
 }
+
+.formInput {
+  @apply rounded-md  border border-black/10 p-4 focus:outline-none focus:ring-1 focus:ring-black;
+}

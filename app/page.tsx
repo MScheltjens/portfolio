@@ -1,8 +1,8 @@
-import { About, Intro, Projects, SectionDivider, Skills } from '@/components';
+import { About, Experience, Intro, Projects, SectionDivider, Skills } from '@/components';
 
 export default function Home() {
   return (
-    <main className='mx-auto flex max-w-[56rem] flex-col items-center px-4'>
+    <main className=' flex flex-col items-center px-4'>
       <Intro />
       <SectionDivider />
       <About />
@@ -10,6 +10,8 @@ export default function Home() {
       <Projects />
       <SectionDivider />
       <Skills />
+      <SectionDivider />
+      <Experience />
     </main>
   );
 }

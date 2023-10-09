@@ -10,7 +10,7 @@ export const About = () => {
   const { ref } = useSectionInView('about', 0.5);
 
   return (
-    <motion.section id='about' ref={ref} className='mb-28 scroll-mt-28 text-center' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+    <motion.section id='about' ref={ref} className='mb-28 max-w-[55rem] scroll-mt-28 text-center' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
       <SectionHeading>About me</SectionHeading>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima eligendi, quibusdam ipsam reiciendis perspiciatis vitae repellat reprehenderit consequatur vel. In magni reiciendis accusamus

@@ -11,7 +11,7 @@ import { SectionHeading } from './section-heading';
 export const Projects = () => {
   const { ref } = useSectionInView('projects', 0.5);
   return (
-    <section ref={ref} id='projects' className='mb-28 scroll-mt-28'>
+    <section id='projects' ref={ref} className='mb-28 max-w-[55rem] scroll-mt-28'>
       <SectionHeading>Projects</SectionHeading>
       <div>
         {PROJECTS.map((project) => (

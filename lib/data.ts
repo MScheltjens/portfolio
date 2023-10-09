@@ -1,3 +1,7 @@
+import React from 'react';
+import { FaReact } from 'react-icons/fa';
+import { LuGraduationCap } from 'react-icons/lu';
+
 // internal links
 
 export const LINKS = [
@@ -5,8 +9,8 @@ export const LINKS = [
   { name: 'about', hash: '#about' },
   { name: 'projects', hash: '#projects' },
   { name: 'skills', hash: '#skills' },
-  { name: 'contact', hash: '#contact' },
   { name: 'experience', hash: '#experience' },
+  { name: 'contact', hash: '#contact' },
 ] as const;
 
 // projects
@@ -73,4 +77,31 @@ export const SKILLS = [
   'Jest',
   'React-testing-library',
   'Next.js Server-actions',
+] as const;
+
+export const EXPERIENCE = [
+  {
+    title: 'Full Stack Developer (internship)',
+    location: 'Yellow Jersey, Kontich',
+    description: 'jkflmsaqdqf fdsqjklmj fdjklmq jklmjlmq jklmjklmq jkomjklmqsf kjlmjklmq jklmjklmj',
+    icon: React.createElement(LuGraduationCap),
+    date: 'Feb - May 2022',
+    type: 'education',
+  },
+  {
+    title: 'Full Stack Developer Graduation',
+    location: 'iCapps, Antwerp',
+    description: 'jkflmsaqdqf fdsqjklmj fdjklmq jklmjlmq jklmjklmq jkomjklmqsf kjlmjklmq jklmjklmj',
+    icon: React.createElement(LuGraduationCap),
+    date: 'Aug 2022',
+    type: 'education',
+  },
+  {
+    title: 'Frontend Web(App) Developer',
+    location: 'iCapps, Antwerp',
+    description: 'jkfldmsjfgksqlfm fjkqsdjmgjsdqklmfjdkslqfgjdlskj fjlkds fdqfsfkld fdsqfdq',
+    icon: React.createElement(FaReact),
+    date: 'Aug 2022 - Aug 2023',
+    type: 'work',
+  },
 ] as const;

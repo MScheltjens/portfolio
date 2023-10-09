@@ -12,29 +12,31 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.0.0",
     "clsx": "^2.0.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.5",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "react-intersection-observer": "^9.5.2",
+    "react-vertical-timeline-component": "^3.6.0",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "postcss": "^8",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.5",
     "tailwindcss": "^3",
     "typescript": "^5"
   }

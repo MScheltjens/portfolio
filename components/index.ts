@@ -1,4 +1,5 @@
 export * from './about';
+export * from './experience';
 export * from './header';
 export * from './intro';
 export * from './projects';

@@ -13,7 +13,7 @@ export const sendMail = async (formData: FormData) => {
   if (!validateString(message, 5000)) return { error: 'invalid message' };
 
   try {
-    resend.emails.send({
+    const data = resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'mathias.scheltjens@gmail.com',
       subject: 'contact form message',
@@ -22,6 +22,7 @@ export const sendMail = async (formData: FormData) => {
         senderEmail: senderEmail as string,
       }),
     });
+    return { data };
   } catch (error) {
     return {
       error: getErrorMessage(error),

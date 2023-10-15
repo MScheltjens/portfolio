@@ -59,9 +59,9 @@ export const Intro = () => {
               setActiveSection('contact');
               setTimeOfLastClick(Date.now());
             }}
-            className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105'
+            className='group flex items-center gap-2 rounded-full border-white/20 bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 dark:border dark:text-white/80 dark:hover:bg-white/20'
           >
-            Contact me here <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />
+            Contact me here <BsArrowRight className='opacity-60 transition group-hover:translate-x-1' />
           </Link>
 
           <a

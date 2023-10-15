@@ -21,12 +21,12 @@ export const Navbar = () => {
                 setActiveSection(name);
                 setTimeOfLastClick(Date.now());
               }}
-              className={cn('flex w-full items-center justify-center px-3 py-3 capitalize hover:text-gray-950', {
-                'text-gray-950': activeSection === name,
+              className={cn('flex w-full items-center justify-center px-3 py-3 capitalize transition hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300', {
+                'text-gray-950 dark:text-gray-200': activeSection === name,
               })}
             >
               {name}
-              {activeSection === name && <span className='absolute inset-0 -z-10 rounded-full bg-gray-100'></span>}
+              {activeSection === name && <span className='absolute inset-0 -z-10 rounded-full bg-gray-100 dark:bg-gray-800'></span>}
             </Link>
           </motion.li>
         ))}

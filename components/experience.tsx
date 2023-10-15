@@ -5,6 +5,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
+import { useThemeContext } from '@/context/theme-context';
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { EXPERIENCE } from '@/lib/data';
 
@@ -12,6 +13,7 @@ import { SectionHeading } from './section-heading';
 
 export const Experience = () => {
   const { ref } = useSectionInView('experience');
+  const { theme } = useThemeContext();
 
   return (
     <section id='experience' ref={ref} className='w-full scroll-mt-28'>

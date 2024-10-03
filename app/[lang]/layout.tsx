@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+
 import '../globals.css';
 
 import { i18n, type Locale } from '../../i18n-config';
 import { ThemeProvider } from '../components/theme-provider';
-import { ModeToggler } from '../components/mode-toggler';
 import { Header } from '../components/header';
 
 export async function generateStaticParams() {

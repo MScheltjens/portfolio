@@ -1,5 +1,6 @@
 import { getDictionary } from '../../get-dictionary';
 import { Locale } from '../../i18n-config';
+import { ModeToggler } from '../components/mode-toggler';
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang);
@@ -10,6 +11,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-2">
           <span className="text-green-400">{dictionary['developer'].fullStack}</span> <span className="text-green-400">{dictionary['developer'].dev}</span>
         </h3>
+        <ModeToggler />
       </main>
     </div>
   );

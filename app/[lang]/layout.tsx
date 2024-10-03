@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '../globals.css';
 
 import { i18n, type Locale } from '../../i18n-config';
+import { ThemeProvider } from '../components/theme-provider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -19,8 +20,12 @@ export default function RootLayout({
   params: { lang: Locale };
 }>) {
   return (
-    <html lang={params.lang}>
-      <body>{children}</body>
+    <html lang={params.lang} suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

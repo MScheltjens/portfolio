@@ -8,7 +8,6 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
     <div className="w-screen h-screen flex justify-center items-center">
       <main>
         <h1>Mathias S. | {dictionary['web-developer'].title}</h1>
-        <LocaleSwitcher />
       </main>
     </div>
   );

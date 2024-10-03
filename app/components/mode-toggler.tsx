@@ -5,11 +5,7 @@ import { Lightbulb, LightbulbOff } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-type Props = {
-  className: string;
-};
-
-export const ModeToggler = ({ className }: Props) => {
+export const ModeToggler = () => {
   const { theme, setTheme } = useTheme();
   const [isClient, setIsClient] = useState<boolean>();
 
@@ -22,7 +18,7 @@ export const ModeToggler = ({ className }: Props) => {
 
   return (
     isClient === true && (
-      <Button size="icon" onClick={() => setTheme(theme && theme === 'light' ? 'dark' : 'light')} className={className}>
+      <Button size="icon" onClick={() => setTheme(theme && theme === 'light' ? 'dark' : 'light')}>
         {theme && theme === 'dark' ? <Lightbulb /> : <LightbulbOff />}
       </Button>
     )

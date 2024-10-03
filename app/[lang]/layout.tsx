@@ -3,6 +3,7 @@ import '../globals.css';
 
 import { i18n, type Locale } from '../../i18n-config';
 import { ThemeProvider } from '../components/theme-provider';
+import { ModeToggler } from '../components/mode-toggler';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang={params.lang} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ModeToggler className="absolute top-5 right-5" />
           {children}
         </ThemeProvider>
       </body>

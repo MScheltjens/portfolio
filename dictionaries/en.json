@@ -1,5 +1,6 @@
 {
-  "web-developer": {
-    "title": "Web Developer"
+  "developer": {
+    "dev": "Developer",
+    "fullStack": "Full Stack"
   }
 }

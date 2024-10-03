@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { i18n, type Locale } from '../../i18n-config';
 
-export default function LocaleSwitcher() {
+export const LocaleSwitcher = () => {
   const pathName = usePathname();
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return '/';
@@ -26,4 +26,4 @@ export default function LocaleSwitcher() {
       </ul>
     </div>
   );
-}
+};

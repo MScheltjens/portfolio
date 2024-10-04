@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-import '../globals.css';
+import { i18n, type Locale } from '@/i18/config';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Header } from '@/components/header';
 
-import { i18n, type Locale } from '../../i18n-config';
-import { ThemeProvider } from '../components/theme-provider';
-import { Header } from '../components/header';
+import '../globals.css';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));

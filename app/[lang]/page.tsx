@@ -2,7 +2,7 @@ import { Locale } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 
 export default async function Home({
-  params: { lang },
+  params: { lang }
 }: {
   params: { lang: Locale };
 }) {

@@ -1,10 +1,10 @@
+import '../globals.css';
+
 import type { Metadata } from 'next';
 
-import { i18n, type Locale } from '@/i18/config';
-import { ThemeProvider } from '@/components/theme-provider';
+import { type Locale, i18n } from '@/i18/config';
 import { Header } from '@/components/header';
-
-import '../globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -24,7 +24,12 @@ export default function RootLayout({
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Header />
           {children}
         </ThemeProvider>

@@ -2,7 +2,7 @@ import { Github, Linkedin } from 'lucide-react';
 import { IconLink } from './icon-link';
 
 export const SocialLinks = () => (
-  <div className="flex gap-5 items-center">
+  <div className="flex items-center gap-5">
     <IconLink href="http://www.linkedin.com">
       <Linkedin />
     </IconLink>

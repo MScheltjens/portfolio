@@ -1,7 +1,7 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Lightbulb, LightbulbOff } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
@@ -18,7 +18,10 @@ export const ModeToggler = () => {
 
   return (
     isClient === true && (
-      <Button size="icon" onClick={() => setTheme(theme && theme === 'light' ? 'dark' : 'light')}>
+      <Button
+        size="icon"
+        onClick={() => setTheme(theme && theme === 'light' ? 'dark' : 'light')}
+      >
         {theme && theme === 'dark' ? <Lightbulb /> : <LightbulbOff />}
       </Button>
     )

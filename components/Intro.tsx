@@ -15,7 +15,7 @@ export const Intro = async ({
     <div className="mx-auto mt-24 flex flex-col-reverse gap-x-10 gap-y-4 md:flex-row">
       <div className="flex flex-1 flex-col">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
-          Mathias S.
+          Mathias S<span className="text-accent">.</span>
         </h1>
         <h3 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
           <span className="text-accent">{profession1}</span>{' '}

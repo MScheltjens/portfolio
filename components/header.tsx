@@ -8,8 +8,8 @@ export const Header = () => (
       <ul className="flex items-center gap-6 text-foreground">
         <li>
           <Link href="/">
-            <h2 className="scroll-m-20 border-b pb-2 pr-3 text-3xl font-semibold tracking-tight first:mt-0">
-              MS <span className="text-accent">.</span>
+            <h2 className="scroll-m-20 pb-2 pr-3 text-3xl font-semibold tracking-wide first:mt-0">
+              MS<span className="text-accent">.</span>
             </h2>
           </Link>
         </li>

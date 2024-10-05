@@ -1,6 +1,5 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,8 +8,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
-    "format:fix": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
+    "format": "prettier ./**/*.{ts,tsx,js,json,css}",
+    "format:fix": "prettier ./**/*.{ts,tsx,js,json,css} --write",
     "prepare": "husky"
   },
   "dependencies": {

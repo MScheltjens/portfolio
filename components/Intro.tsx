@@ -18,7 +18,7 @@ export const Intro = async ({
           Mathias S.
         </h1>
         <h3 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
-          <span className="text-green-400">{profession1}</span>{' '}
+          <span className="text-accent">{profession1}</span>{' '}
           <span>{profession2}</span>
         </h3>
         <p className="leading-7 [&:not(:first-child)]:mt-6">{description}</p>

@@ -20,6 +20,7 @@ export const ModeToggler = () => {
     isClient === true && (
       <Button
         size="icon"
+        variant="link"
         onClick={() => setTheme(theme && theme === 'light' ? 'dark' : 'light')}
       >
         {theme && theme === 'dark' ? <Lightbulb /> : <LightbulbOff />}

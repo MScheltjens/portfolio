@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Mathias S. | Web Developer'
+  title: 'Mathias S. | Portfolio'
 };
 
 export default function RootLayout({

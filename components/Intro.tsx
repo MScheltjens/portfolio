@@ -21,7 +21,7 @@ export const Intro = async ({
           <span className="text-green-400">{profession1}</span>{' '}
           <span>{profession2}</span>
         </h3>
-        <p>{description}</p>
+        <p className="leading-7 [&:not(:first-child)]:mt-6">{description}</p>
       </div>
       <div className="relative border">
         <Image

@@ -1,6 +1,7 @@
 {
-  "developer": {
-    "dev": "Developer",
-    "fullStack": "Full Stack"
+  "intro": {
+    "title1": "Full Stack",
+    "title2": "Developer",
+    "description": "I am a Full Stack Developer with a passion for creating web applications that are both functional and beautiful. I have experience in both front-end and back-end development, and I am always looking to learn new technologies and improve my skills."
   }
 }

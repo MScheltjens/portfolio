@@ -1,15 +1,62 @@
+import { Linkedin, Github } from 'lucide-react';
+import { IconLink } from './icon-link';
 import { LocaleSwitcher } from './locale-switcher';
 import { ModeToggler } from './mode-toggler';
-import { SocialLinks } from './social-links';
+import Link from 'next/link';
 
 export const Header = () => (
-  <header className="flex p-5">
-    <div className="container mx-auto flex flex-1 items-center justify-between">
-      <SocialLinks />
+  // <header className="flex p-5">
+  //   <nav className="container mx-auto flex flex-1 items-center justify-between gap-2">
+  // <div className="flex gap-2">
+  //   <IconLink href="http://www.linkedin.com">
+  //     <Linkedin />
+  //   </IconLink>
+  //   <IconLink href="http://www.github.com">
+  //     <Github />
+  //   </IconLink>
+  // </div>
+  // <ul className="flex gap-2">
+  //   <li>
+  //     <Link href="/past">Past</Link>
+  //   </li>
+  //   <li>
+  //     <Link href="/past">Present</Link>
+  //   </li>
+  //   <li>
+  //     <Link href="/past">Future</Link>
+  //   </li>
+  // </ul>
+  // <div className="flex gap-2">
+  //   <ModeToggler />
+  //   <LocaleSwitcher />
+  // </div>
+  //   </nav>
+  // </header>
+  <header className="fixed inset-x-0 top-0 z-50">
+    <nav className="container mx-auto flex max-w-4xl items-center justify-between p-2">
       <div className="flex gap-3">
+        <IconLink href="http://www.linkedin.com">
+          <Linkedin />
+        </IconLink>
+        <IconLink href="http://www.github.com">
+          <Github />
+        </IconLink>
+      </div>
+      <ul className="flex gap-3 text-foreground">
+        <li className="transition-colors hover:text-accent">
+          <Link href="/past">Past</Link>
+        </li>
+        <li className="transition-colors hover:text-accent">
+          <Link href="/past">Present</Link>
+        </li>
+        <li className="transition-colors hover:text-accent">
+          <Link href="/past">Future</Link>
+        </li>
+      </ul>
+      <div className="flex gap-2">
         <ModeToggler />
         <LocaleSwitcher />
       </div>
-    </div>
+    </nav>
   </header>
 );

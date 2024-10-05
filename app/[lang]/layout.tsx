@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 import { type Locale, i18n } from '@/i18/config';
 import { Header } from '@/components/header';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Providers } from '@/components/providers';
+import { Footer } from '@/components/footer';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -23,16 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={params.lang} suppressHydrationWarning>
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className="flex min-h-screen flex-col antialiased">
+        <Providers>
           <Header />
-          {children}
-        </ThemeProvider>
+          <main className="grow"> {children}</main>
+
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

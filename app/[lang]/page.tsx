@@ -9,10 +9,11 @@ export default async function Home({
   const dictionary = await getDictionary(lang);
   return (
     <div className="container mx-auto flex h-screen w-screen items-center justify-center">
-      <main>
+      <main className="items-center gap-5 md:flex">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
           Mathias S.
         </h1>
+
         <h3 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
           <span className="text-green-400">
             {dictionary['developer'].fullStack}

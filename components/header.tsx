@@ -32,28 +32,28 @@ export const Header = () => (
   // </div>
   //   </nav>
   // </header>
-  <header className="fixed inset-x-0 top-0 z-50">
-    <nav className="container mx-auto flex max-w-4xl items-center justify-between p-2">
-      <div className="flex gap-3">
+  <header className="fixed inset-x-0 top-0 z-50 flex p-2">
+    <nav className="container mx-auto flex max-w-4xl flex-1 items-center justify-between p-3">
+      <div>
+        <ul className="flex gap-3 text-foreground">
+          <li className="transition-colors hover:text-accent">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="transition-colors hover:text-accent">
+            <Link href="/work">Work</Link>
+          </li>
+          <li className="transition-colors hover:text-accent">
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="flex gap-2">
         <IconLink href="http://www.linkedin.com">
           <Linkedin />
         </IconLink>
         <IconLink href="http://www.github.com">
           <Github />
         </IconLink>
-      </div>
-      <ul className="flex gap-3 text-foreground">
-        <li className="transition-colors hover:text-accent">
-          <Link href="/past">Past</Link>
-        </li>
-        <li className="transition-colors hover:text-accent">
-          <Link href="/past">Present</Link>
-        </li>
-        <li className="transition-colors hover:text-accent">
-          <Link href="/past">Future</Link>
-        </li>
-      </ul>
-      <div className="flex gap-2">
         <ModeToggler />
         <LocaleSwitcher />
       </div>

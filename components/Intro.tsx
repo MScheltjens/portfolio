@@ -12,7 +12,7 @@ export const Intro = async ({
   description
 }: Props) => {
   return (
-    <section className="mx-auto flex flex-col-reverse gap-x-10 gap-y-4 md:flex-row">
+    <div className="mx-auto mt-24 flex flex-col-reverse gap-x-10 gap-y-4 md:flex-row">
       <div className="flex flex-1 flex-col">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
           Mathias S.
@@ -33,6 +33,6 @@ export const Intro = async ({
           priority
         />
       </div>
-    </section>
+    </div>
   );
 };

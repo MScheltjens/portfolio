@@ -7,35 +7,34 @@ import { Button } from '@/components/ui/button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ContactFormSchema, Inputs } from '../schemas/contact-form-schema';
 import { Form } from './ui/form';
+import { toast } from 'sonner';
 
 export const ContactForm = () => {
-  const form =
-    //  {
-    //     register,
-    //     handleSubmit,
-    //     // reset,
-    //     formState: { errors, isSubmitting }
-    //   }
-    useForm<Inputs>({
-      resolver: zodResolver(ContactFormSchema),
-      defaultValues: { name: '', email: '', message: '' }
-    });
+  const form = useForm<Inputs>({
+    resolver: zodResolver(ContactFormSchema),
+    defaultValues: { name: '', email: '', message: '' }
+  });
 
   const {
+    reset,
     register,
     handleSubmit: forhandleSubmit,
     formState: { errors, isSubmitting }
   } = form;
 
   const processForm: SubmitHandler<Inputs> = async (data) => {
-    // const result = await sendEmail(data);
-    console.log('processing', data);
+    // console.log(data);
+    // toast.success('Message sent successfully!');
+    toast.success('Message sent successfully!');
+    console.log(data);
+    reset();
   };
 
   return (
     <Form {...form}>
       <form onSubmit={forhandleSubmit(processForm)} noValidate>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {/* Name */}
           <div>
             <Input
               id="name"
@@ -50,6 +49,8 @@ export const ContactForm = () => {
               ))}
             />
           </div>
+
+          {/* Email */}
           <div>
             <Input
               id="email"
@@ -64,7 +65,9 @@ export const ContactForm = () => {
               ))}
             />
           </div>
-          <div>
+
+          {/* Message */}
+          <div className="sm:col-span-2">
             <Textarea
               id="message"
               placeholder="Message"
@@ -77,8 +80,13 @@ export const ContactForm = () => {
             />
           </div>
         </div>
+
         <div className="mt-6">
-          <Button type="submit" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full disabled:opacity-50"
+          >
             {isSubmitting ? 'Submitting...' : 'Contact Me'}
           </Button>
         </div>

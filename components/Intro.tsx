@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import authorImage from '@/public/images/me.jpeg';
 
 type Props = {
   profession1: string;
@@ -23,10 +24,10 @@ export const Intro = async ({
         </h3>
         <p className="leading-7 [&:not(:first-child)]:mt-6">{description}</p>
       </div>
-      <div className="relative border">
+      <div className="relative">
         <Image
-          className="flex-1 rounded-lg grayscale"
-          src=""
+          className="flex-1 grayscale"
+          src={authorImage}
           alt="Mathias S."
           width={175}
           height={175}

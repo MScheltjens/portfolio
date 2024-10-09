@@ -12,4 +12,4 @@ export const ContactFormSchema = z.object({
   message: z.string().min(1, { message: 'Message is required' })
 });
 
-export type Inputs = z.infer<typeof ContactFormSchema>;
+export type ContactFormInputs = z.infer<typeof ContactFormSchema>;

@@ -5,8 +5,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ContactFormSchema, Inputs } from './contact-form-schema';
+import { ContactFormSchema, ContactFormInputs } from './contact-form-schema';
 import { toast } from 'sonner';
+import { sendEmail } from '@/lib/actions';
 
 type FormData = {
   name: string;
@@ -26,9 +27,9 @@ export const ContactForm = ({
   message,
   send,
   submitting,
-  toast: { success }
+  toast: { success, error }
 }: FormData) => {
-  const form = useForm<Inputs>({
+  const form = useForm<ContactFormInputs>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: { name: '', email: '', message: '' }
   });
@@ -40,8 +41,14 @@ export const ContactForm = ({
     formState: { errors, isSubmitting }
   } = form;
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
+    const response = await sendEmail(data);
+    console.log(response);
+
+    if (response?.error) {
+      toast.error(error);
+      return;
+    }
     toast.success(success);
     reset();
   };

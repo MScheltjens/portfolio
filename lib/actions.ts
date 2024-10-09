@@ -5,7 +5,7 @@ import {
   ContactFormSchema
 } from '@/components/forms/contact-form-schema';
 import { Resend } from 'resend';
-import { ContactFormEmail } from '../emails/contact-form-email';
+import { ContactFormEmail } from '@/emails/contact-form-email';
 
 export const sendEmail = async (data: ContactFormInputs) => {
   // instantiate a new Resend instance with the API key

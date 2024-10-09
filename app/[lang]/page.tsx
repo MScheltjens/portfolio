@@ -9,7 +9,7 @@ export default async function Home({
 }) {
   const dictionary = await getDictionary(lang);
   return (
-    <section className="container mx-auto max-w-4xl p-3 py-24">
+    <section className="container max-w-4xl">
       <Intro
         profession1={dictionary['intro'].title1}
         profession2={dictionary['intro'].title2}

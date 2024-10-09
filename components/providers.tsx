@@ -3,18 +3,16 @@
 import { ThemeProvider, useTheme } from 'next-themes';
 import { Toaster } from './ui/sonner';
 
-export const Providers = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      disableTransitionOnChange
-    >
-      {children}
-      <ToastProvider />
-    </ThemeProvider>
-  );
-};
+export const Providers = ({ children }: { children: React.ReactNode }) => (
+  <ThemeProvider
+    attribute="class"
+    defaultTheme="system"
+    disableTransitionOnChange
+  >
+    {children}
+    <ToastProvider />
+  </ThemeProvider>
+);
 
 const ToastProvider = () => {
   const { resolvedTheme } = useTheme();

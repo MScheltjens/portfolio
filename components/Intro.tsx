@@ -9,7 +9,7 @@ type Props = {
 
 export const Intro = ({ profession1, profession2, description }: Props) => {
   return (
-    <div className="mx-auto mt-36 flex flex-col-reverse gap-x-10 gap-y-4 md:flex-row">
+    <div className="mx-auto mt-24 flex flex-col-reverse gap-x-10 gap-y-4 md:mt-36 md:flex-row md:items-center">
       <div className="flex flex-1 flex-col">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
           Mathias S<span className="text-accent">.</span>
@@ -22,11 +22,11 @@ export const Intro = ({ profession1, profession2, description }: Props) => {
       </div>
       <div className="relative">
         <Image
-          className="flex-1 grayscale"
+          className="w-full flex-1 grayscale"
           src={authorImage}
           alt="Mathias S."
-          width={175}
-          height={175}
+          width={220}
+          height={220}
           priority
         />
       </div>

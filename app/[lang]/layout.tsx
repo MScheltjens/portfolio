@@ -32,7 +32,8 @@ export default async function RootLayout({
           <Header
             translations={{
               home: dictionary['navigation'].home,
-              work: dictionary['navigation'].work,
+              about: dictionary['navigation'].about,
+              projects: dictionary['navigation'].projects,
               contact: dictionary['navigation'].contact
             }}
             locale={params.lang}

@@ -13,16 +13,17 @@ type Props = {
   locale: Locale;
   className?: string;
   translations: {
-    work: string;
-    contact: string;
     home: string;
+    about: string;
+    projects: string;
+    contact: string;
   };
 };
 
 export const HamburgerMenu = ({
   locale,
   className,
-  translations: { home, work, contact }
+  translations: { home, about, projects, contact }
 }: Props) => {
   return (
     <DropdownMenu>
@@ -35,9 +36,11 @@ export const HamburgerMenu = ({
         <DropdownMenuItem>
           <Link href={`/${locale}`}>{home}</Link>
         </DropdownMenuItem>
-
         <DropdownMenuItem>
-          <Link href={`/${locale}/work`}>{work}</Link>
+          <Link href={`/${locale}/about`}>{about}</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href={`/${locale}/projects`}>{projects}</Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Link href={`/${locale}/contact`}>{contact}</Link>

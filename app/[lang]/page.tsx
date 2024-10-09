@@ -13,9 +13,8 @@ export default async function Home({ params: { lang } }: Props) {
   return (
     <section className="container max-w-4xl">
       <Intro
-        profession1={dictionary['intro'].title1}
-        profession2={dictionary['intro'].title2}
-        description={dictionary['intro'].description}
+        title1={dictionary['intro'].title1}
+        title2={dictionary['intro'].title2}
       />
     </section>
   );

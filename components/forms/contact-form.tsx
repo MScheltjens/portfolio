@@ -8,16 +8,18 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ContactFormSchema, Inputs } from './contact-form-schema';
 import { toast } from 'sonner';
 
+type Toast = {
+  success: string;
+  error: string;
+};
+
 type FormData = {
   name: string;
   email: string;
   message: string;
   send: string;
   submitting: string;
-  toast: {
-    success: string;
-    error: string;
-  };
+  toast: Toast;
 };
 
 export const ContactForm = ({

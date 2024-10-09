@@ -24,7 +24,7 @@ export default async function Page({ params: { lang } }: Props) {
   };
 
   return (
-    <section className="container max-w-4xl py-24">
+    <section className="container max-w-4xl py-36">
       <h2 className="w-fit scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
         {dictionary['contact'].title}
       </h2>

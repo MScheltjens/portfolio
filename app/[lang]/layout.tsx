@@ -30,8 +30,10 @@ export default async function RootLayout({
       <body className="flex min-h-screen flex-col antialiased">
         <Providers>
           <Header
-            work={dictionary['navigation'].work}
-            contact={dictionary['navigation'].contact}
+            translations={{
+              work: dictionary['navigation'].work,
+              contact: dictionary['navigation'].contact
+            }}
             locale={params.lang}
           />
           <main className="grow"> {children}</main>

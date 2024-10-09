@@ -9,7 +9,7 @@ type Props = {
 
 export const Intro = ({ profession1, profession2, description }: Props) => {
   return (
-    <div className="mx-auto mt-36 flex flex-col-reverse items-center gap-x-10 gap-y-4 md:flex-row">
+    <div className="mx-auto mt-36 flex flex-col-reverse gap-x-10 gap-y-4 md:flex-row">
       <div className="flex flex-1 flex-col">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
           Mathias S<span className="text-accent">.</span>

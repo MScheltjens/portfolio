@@ -9,16 +9,18 @@ import { ContactFormSchema, ContactFormInputs } from './contact-form-schema';
 import { toast } from 'sonner';
 import { sendEmail } from '@/lib/actions';
 
+type Toast = {
+  success: string;
+  error: string;
+};
+
 type FormData = {
   name: string;
   email: string;
   message: string;
   send: string;
   submitting: string;
-  toast: {
-    success: string;
-    error: string;
-  };
+  toast: Toast;
 };
 
 export const ContactForm = ({

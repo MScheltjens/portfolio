@@ -45,7 +45,6 @@ export const ContactForm = ({
 
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
     const response = await sendEmail(data);
-    console.log(response);
 
     if (response?.error) {
       toast.error(error);
@@ -59,50 +58,47 @@ export const ContactForm = ({
     <form onSubmit={handleSubmit(onSubmit)} className="mt-16 lg:flex-auto">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {/* Name */}
-        <div>
-          <Input
-            id="name"
-            type="text"
-            placeholder={name}
-            autoComplete="given-name"
-            {...register('name')}
-          />
-          {errors.name?.message && (
-            <p className="ml-1 mt-2 text-sm text-rose-400">
-              {errors.name.message}
-            </p>
-          )}
-        </div>
+
+        <Input
+          id="name"
+          type="text"
+          placeholder={name}
+          autoComplete="given-name"
+          {...register('name')}
+        />
+        {errors.name?.message && (
+          <p className="ml-1 mt-2 text-sm text-rose-400">
+            {errors.name.message}
+          </p>
+        )}
 
         {/* Email */}
-        <div>
-          <Input
-            id="email"
-            type="email"
-            placeholder={email}
-            autoComplete="given-email"
-            {...register('email')}
-          />
-          {errors.name?.message && (
-            <p className="ml-1 mt-2 text-sm text-rose-400">
-              {errors.name.message}
-            </p>
-          )}
-        </div>
+
+        <Input
+          id="email"
+          type="email"
+          placeholder={email}
+          autoComplete="given-email"
+          {...register('email')}
+        />
+        {errors.name?.message && (
+          <p className="ml-1 mt-2 text-sm text-rose-400">
+            {errors.name.message}
+          </p>
+        )}
 
         {/* Message */}
-        <div className="sm:col-span-2">
-          <Textarea
-            id="message"
-            placeholder={message}
-            {...register('message')}
-          />
-          {errors.message?.message && (
-            <p className="ml-1 mt-2 text-sm text-rose-400">
-              {errors.message.message}
-            </p>
-          )}
-        </div>
+        <Textarea
+          id="message"
+          className="sm:col-span-2"
+          placeholder={message}
+          {...register('message')}
+        />
+        {errors.message?.message && (
+          <p className="ml-1 mt-2 text-sm text-rose-400">
+            {errors.message.message}
+          </p>
+        )}
       </div>
 
       <div className="mt-6">

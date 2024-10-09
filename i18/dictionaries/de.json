@@ -5,6 +5,7 @@
     "description": "Ich bin ein Full Stack Entwickler mit einer Leidenschaft für die Erstellung von Webanwendungen, die funktional und schön sind. Ich habe Erfahrung in der Front-End- und Back-End-Entwicklung und bin immer auf der Suche nach neuen Technologien und der Verbesserung meiner Fähigkeiten."
   },
   "navigation": {
+    "home": "Startseite",
     "work": "Arbeit",
     "contact": "Kontakt"
   },

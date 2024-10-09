@@ -15,13 +15,14 @@ type Props = {
   translations: {
     work: string;
     contact: string;
+    home: string;
   };
 };
 
 export const HamburgerMenu = ({
   locale,
   className,
-  translations: { work, contact }
+  translations: { home, work, contact }
 }: Props) => {
   return (
     <DropdownMenu>
@@ -31,6 +32,10 @@ export const HamburgerMenu = ({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="min-w-fit">
+        <DropdownMenuItem>
+          <Link href={`/${locale}`}>{home}</Link>
+        </DropdownMenuItem>
+
         <DropdownMenuItem>
           <Link href={`/${locale}/work`}>{work}</Link>
         </DropdownMenuItem>

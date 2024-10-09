@@ -31,6 +31,7 @@ export default async function RootLayout({
         <Providers>
           <Header
             translations={{
+              home: dictionary['navigation'].home,
               work: dictionary['navigation'].work,
               contact: dictionary['navigation'].contact
             }}

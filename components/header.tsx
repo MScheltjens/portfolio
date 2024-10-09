@@ -5,11 +5,14 @@ import Link from 'next/link';
 import { HamburgerMenu } from './hamburger-menu';
 
 type Props = {
-  translations: { work: string; contact: string };
+  translations: { home: string; work: string; contact: string };
   locale: Locale;
 };
 
-export const Header = ({ translations: { work, contact }, locale }: Props) => (
+export const Header = ({
+  translations: { home, work, contact },
+  locale
+}: Props) => (
   <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm">
     <nav className="container flex max-w-4xl items-center justify-between">
       <Link
@@ -23,7 +26,7 @@ export const Header = ({ translations: { work, contact }, locale }: Props) => (
 
       <HamburgerMenu
         locale={locale}
-        translations={{ work, contact }}
+        translations={{ home, work, contact }}
         className="sm:hidden"
       />
 

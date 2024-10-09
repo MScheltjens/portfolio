@@ -5,6 +5,7 @@
     "description": "I am a Full Stack Developer with a passion for creating web applications that are both functional and beautiful. I have experience in both front-end and back-end development, and I am always looking to learn new technologies and improve my skills."
   },
   "navigation": {
+    "home": "Home",
     "work": "Work",
     "contact": "Contact"
   },

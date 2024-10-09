@@ -1,8 +1,15 @@
+import { Locale } from '@/i18/config';
 import { LocaleSwitcher } from './locale-switcher';
 import { ModeToggler } from './mode-toggler';
 import Link from 'next/link';
 
-export const Header = () => (
+type Props = {
+  work: string;
+  contact: string;
+  locale: Locale;
+};
+
+export const Header = ({ work, contact, locale }: Props) => (
   <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm">
     <nav className="container flex max-w-4xl items-center justify-between">
       <div>
@@ -15,10 +22,10 @@ export const Header = () => (
 
       <ul className="flex items-center gap-6 font-light text-muted-foreground sm:gap-10">
         <li className="transition-colors hover:text-accent">
-          <Link href="/work">Work</Link>
+          <Link href={`/${locale}/work`}>{work}</Link>
         </li>
         <li className="transition-colors hover:text-accent">
-          <Link href="/contact">Contact</Link>
+          <Link href={`/${locale}/contact`}>{contact}</Link>
         </li>
       </ul>
 

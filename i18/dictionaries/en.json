@@ -3,5 +3,24 @@
     "title1": "Full Stack",
     "title2": "Developer",
     "description": "I am a Full Stack Developer with a passion for creating web applications that are both functional and beautiful. I have experience in both front-end and back-end development, and I am always looking to learn new technologies and improve my skills."
+  },
+  "navigation": {
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "If you have any questions or would like to work together, please feel free to contact me. I am always looking for new opportunities and challenges."
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "submitting": "Sending...",
+    "toast": {
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    }
   }
 }

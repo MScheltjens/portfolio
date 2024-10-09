@@ -8,7 +8,26 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ContactFormSchema, Inputs } from './contact-form-schema';
 import { toast } from 'sonner';
 
-export const ContactForm = () => {
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+  send: string;
+  submitting: string;
+  toast: {
+    success: string;
+    error: string;
+  };
+};
+
+export const ContactForm = ({
+  name,
+  email,
+  message,
+  send,
+  submitting,
+  toast: { success }
+}: FormData) => {
   const form = useForm<Inputs>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: { name: '', email: '', message: '' }
@@ -23,7 +42,7 @@ export const ContactForm = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     console.log(data);
-    toast.success('Message sent successfully!');
+    toast.success(success);
     reset();
   };
 
@@ -35,7 +54,7 @@ export const ContactForm = () => {
           <Input
             id="name"
             type="text"
-            placeholder="Name"
+            placeholder={name}
             autoComplete="given-name"
             {...register('name')}
           />
@@ -51,7 +70,7 @@ export const ContactForm = () => {
           <Input
             id="email"
             type="email"
-            placeholder="Email"
+            placeholder={email}
             autoComplete="given-email"
             {...register('email')}
           />
@@ -66,7 +85,7 @@ export const ContactForm = () => {
         <div className="sm:col-span-2">
           <Textarea
             id="message"
-            placeholder="Message"
+            placeholder={message}
             {...register('message')}
           />
           {errors.message?.message && (
@@ -83,7 +102,7 @@ export const ContactForm = () => {
           disabled={isSubmitting}
           className="w-full disabled:opacity-50"
         >
-          {isSubmitting ? 'Submitting...' : 'Contact Me'}
+          {isSubmitting ? submitting : send}
         </Button>
       </div>
     </form>

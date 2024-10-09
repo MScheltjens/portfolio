@@ -3,5 +3,24 @@
     "title1": "Full Stack",
     "title2": "Entwickler",
     "description": "Ich bin ein Full Stack Entwickler mit einer Leidenschaft für die Erstellung von Webanwendungen, die funktional und schön sind. Ich habe Erfahrung in der Front-End- und Back-End-Entwicklung und bin immer auf der Suche nach neuen Technologien und der Verbesserung meiner Fähigkeiten."
+  },
+  "navigation": {
+    "work": "Arbeit",
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "title": "Kontaktiere mich",
+    "description": "Wenn Sie Fragen haben oder zusammenarbeiten möchten, zögern Sie bitte nicht, mich zu kontaktieren. Ich bin immer auf der Suche nach neuen Möglichkeiten und Herausforderungen."
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "submitting": "Senden...",
+    "toast": {
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
   }
 }

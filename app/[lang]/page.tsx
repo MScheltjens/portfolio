@@ -2,11 +2,13 @@ import { Intro } from '@/components/Intro';
 import { Locale } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 
-export default async function Home({
-  params: { lang }
-}: {
-  params: { lang: Locale };
-}) {
+type Props = {
+  params: {
+    lang: Locale;
+  };
+};
+
+export default async function Home({ params: { lang } }: Props) {
   const dictionary = await getDictionary(lang);
   return (
     <section className="container max-w-4xl">

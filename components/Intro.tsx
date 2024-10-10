@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const Intro = ({ title1, title2 }: Props) => (
-  <div className="mx-auto mt-24 flex flex-col justify-around gap-x-10 gap-y-4 md:mt-36 md:flex-row md:items-center">
+  <section className="mx-auto flex flex-col justify-around gap-x-10 gap-y-4 md:flex-row md:items-center">
     <div className="flex flex-col">
       <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-6xl">
         Mathias <span className="text-accent">Scheltjens</span>
@@ -26,5 +26,5 @@ export const Intro = ({ title1, title2 }: Props) => (
         priority
       />
     </div>
-  </div>
+  </section>
 );

@@ -19,7 +19,7 @@ export const Header = ({
   locale
 }: Props) => (
   <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm">
-    <nav className="container flex max-w-4xl items-center justify-between">
+    <nav className="container flex max-w-7xl items-center justify-between">
       <Link href={`/${locale}`} className="hidden text-2xl sm:block">
         <h2 className="scroll-m-20 pb-2 pr-3 text-3xl tracking-wide first:mt-0">
           MS<span className="text-accent">.</span>

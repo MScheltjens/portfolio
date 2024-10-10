@@ -1,8 +1,7 @@
 {
   "intro": {
     "title1": "Full Stack",
-    "title2": "Entwickler",
-    "description": "Ich bin ein Full Stack Entwickler mit einer Leidenschaft für die Erstellung von Webanwendungen, die funktional und schön sind. Ich habe Erfahrung in der Front-End- und Back-End-Entwicklung und bin immer auf der Suche nach neuen Technologien und der Verbesserung meiner Fähigkeiten."
+    "title2": "Entwickler"
   },
   "navigation": {
     "home": "Startseite",
@@ -10,7 +9,15 @@
     "projects": "Projekte",
     "contact": "Kontakt"
   },
-  "contact": {
+  "aboutPage": {
+    "title": "Über mich",
+    "description": "Ich bin ein Full Stack Entwickler mit einer Leidenschaft für die Erstellung von Webanwendungen, die funktional und schön sind. Ich habe Erfahrung in der Front-End- und Back-End-Entwicklung und bin immer auf der Suche nach neuen Technologien und der Verbesserung meiner Fähigkeiten."
+  },
+  "projectsPage": {
+    "title": "Projekte",
+    "description": "Hier sind einige der Projekte, an denen ich als Front-End-Entwickler gearbeitet habe"
+  },
+  "contactPage": {
     "title": "Kontaktiere mich",
     "description": "Wenn Sie Fragen haben oder zusammenarbeiten möchten, zögern Sie bitte nicht, mich zu kontaktieren. Ich bin immer auf der Suche nach neuen Möglichkeiten und Herausforderungen."
   },

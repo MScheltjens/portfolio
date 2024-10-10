@@ -38,7 +38,7 @@ export default async function RootLayout({
             }}
             locale={params.lang}
           />
-          <main className="grow"> {children}</main>
+          <div className="grow"> {children}</div>
           <Footer />
         </Providers>
       </body>

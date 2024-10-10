@@ -8,29 +8,22 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ContactFormSchema, ContactFormInputs } from './contact-form-schema';
 import { toast } from 'sonner';
 import { sendEmail } from '@/lib/actions';
+import { getDictionary } from '@/i18/get-dictionary';
 
-type Toast = {
-  success: string;
-  error: string;
-};
-
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-  send: string;
-  submitting: string;
-  toast: Toast;
+type Props = {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>['contactForm'];
 };
 
 export const ContactForm = ({
-  name,
-  email,
-  message,
-  send,
-  submitting,
-  toast: { success, error }
-}: FormData) => {
+  dictionary: {
+    name,
+    email,
+    message,
+    toast: { error, success },
+    send,
+    submitting
+  }
+}: Props) => {
   const form = useForm<ContactFormInputs>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: { name: '', email: '', message: '' }
@@ -55,7 +48,7 @@ export const ContactForm = ({
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mt-16 lg:flex-auto">
+    <form onSubmit={handleSubmit(onSubmit)} className="py-12 lg:flex-auto">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {/* Name */}
 

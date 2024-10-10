@@ -7,8 +7,8 @@ type Props = {
 };
 
 export const Intro = ({ title1, title2 }: Props) => (
-  <div className="mx-auto mt-24 flex flex-col-reverse gap-x-10 gap-y-4 md:mt-36 md:flex-row md:items-center">
-    <div className="flex flex-1 flex-col">
+  <div className="mx-auto mt-24 flex flex-col justify-around gap-x-10 gap-y-4 md:mt-36 md:flex-row md:items-center">
+    <div className="flex flex-col">
       <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-6xl">
         Mathias <span className="text-accent">Scheltjens</span>
       </h1>
@@ -18,7 +18,7 @@ export const Intro = ({ title1, title2 }: Props) => (
     </div>
     <div className="relative">
       <Image
-        className="w-full flex-1 grayscale"
+        className="w-full opacity-60 grayscale"
         src={authorImage}
         alt="Mathias S."
         width={220}

@@ -18,7 +18,7 @@ export const Intro = ({ title1, title2 }: Props) => (
     </div>
     <div className="relative">
       <Image
-        className="w-full opacity-60 grayscale"
+        className="w-full opacity-80 grayscale"
         src={authorImage}
         alt="Mathias S."
         width={220}

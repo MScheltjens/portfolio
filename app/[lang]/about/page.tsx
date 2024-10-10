@@ -12,7 +12,7 @@ export default async function Page({ params: { lang } }: Props) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <main className="md container max-w-7xl py-24 text-foreground md:py-36">
+    <main className="md container max-w-4xl py-24 text-foreground md:py-36">
       <PageHeading
         title={dictionary['aboutPage'].title}
         description={dictionary['aboutPage'].description}

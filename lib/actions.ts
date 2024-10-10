@@ -20,8 +20,7 @@ export const sendEmail = async (data: ContactFormInputs) => {
   try {
     const { name, email, message } = result.data;
     const { data, error } = await resend.emails.send({
-      // todo: when domain verified, continue!
-      from: 'mathias.scheltjens@gmail.com',
+      from: 'mathias@ms-gizmo.dev',
       to: [email],
       cc: ['mathias.scheltjens@gmail.com'],
       subject: 'Contact form submission',

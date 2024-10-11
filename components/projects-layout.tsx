@@ -2,11 +2,7 @@
 
 import { LayoutGrid } from './ui/layout-grid';
 
-export const ProjectsLayout = () => (
-  <div className="h-screen w-full">
-    <LayoutGrid cards={cards} />
-  </div>
-);
+export const ProjectsLayout = () => <LayoutGrid cards={cards} />;
 
 const SkeletonOne = () => (
   <div>
@@ -23,9 +19,7 @@ const SkeletonOne = () => (
 
 const SkeletonTwo = () => (
   <div>
-    <p className="text-xl font-bold text-white md:text-4xl">
-      House above the clouds
-    </p>
+    <p className="text-xl font-bold text-white md:text-4xl">Project 2</p>
     <p className="text-base font-normal text-white"></p>
     <p className="my-4 max-w-lg text-base font-normal text-neutral-200">
       Perched high above the world, this house offers breathtaking views and a

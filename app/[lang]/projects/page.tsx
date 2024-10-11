@@ -20,7 +20,9 @@ export default async function Page({ params: { lang } }: Props) {
         description={dictionary['projectsPage'].description}
         className="container max-w-5xl pt-24 md:pt-36"
       />
-      <ProjectsLayout />
+      <div className="absolute left-0 top-0 h-screen w-screen">
+        <ProjectsLayout />
+      </div>
     </main>
   );
 }

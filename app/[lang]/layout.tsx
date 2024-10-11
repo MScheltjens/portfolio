@@ -6,7 +6,6 @@ import { type Locale, i18n } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 import { Header } from '@/components/header';
 import { Providers } from '@/components/providers';
-import { Footer } from '@/components/footer';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -39,7 +38,6 @@ export default async function RootLayout({
             locale={params.lang}
           />
           <div className="grow"> {children}</div>
-          <Footer />
         </Providers>
       </body>
     </html>

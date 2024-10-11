@@ -30,7 +30,7 @@ export const LayoutGrid = ({ cards }: Props) => {
   };
 
   return (
-    <div className="relative mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-6 p-10 hover:cursor-pointer md:grid-cols-3">
+    <div className="relative mx-auto grid h-full w-full grid-cols-1 gap-3 px-10 pt-64 hover:cursor-pointer md:grid-cols-3 md:gap-6">
       {cards.map((card, i) => (
         <div
           key={i}
@@ -45,7 +45,7 @@ export const LayoutGrid = ({ cards }: Props) => {
               card.className,
               'relative overflow-hidden',
               selected?.id === card.id
-                ? 'absolute inset-0 z-50 m-auto flex h-1/2 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:w-1/2'
+                ? 'absolute inset-0 z-50 m-auto flex h-2/3 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:w-2/3'
                 : lastSelected?.id === card.id
                   ? 'z-40 h-full w-full rounded-xl bg-white'
                   : 'h-full w-full rounded-xl bg-white'

@@ -10,10 +10,10 @@ export const Intro = ({ title1, title2 }: Props) => (
   <section className="mx-auto flex flex-col justify-around gap-x-10 gap-y-4 md:flex-row md:items-center">
     <div className="flex flex-col">
       <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-6xl">
-        Mathias <span className="text-accent">Scheltjens</span>
+        Mathias <span className="text-primary">Scheltjens</span>
       </h1>
       <h3 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
-        <span className="text-accent">{title1}</span> <span>{title2}</span>
+        <span className="text-primary">{title1}</span> <span>{title2}</span>
       </h3>
     </div>
     <div className="relative">

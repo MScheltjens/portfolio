@@ -7,45 +7,28 @@ import {
   DropdownMenuTrigger
 } from './ui/dropdown-menu';
 import Link from 'next/link';
-import { Locale } from '@/i18/config';
+import { NavProps } from './header';
 
-type Props = {
-  locale: Locale;
-  className?: string;
-  translations: {
-    home: string;
-    about: string;
-    projects: string;
-    contact: string;
-  };
-};
-
-export const HamburgerMenu = ({
-  locale,
-  className,
-  translations: { home, about, projects, contact }
-}: Props) => {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild className={className}>
-        <Button variant="link" size="icon">
-          <MenuIcon />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="min-w-fit">
-        <DropdownMenuItem>
-          <Link href={`/${locale}`}>{home}</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href={`/${locale}/about`}>{about}</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href={`/${locale}/projects`}>{projects}</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href={`/${locale}/contact`}>{contact}</Link>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-};
+export const HamburgerMenu = ({ locale, translations }: NavProps) => (
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild className="sm:block">
+      <Button variant="link" size="icon">
+        <MenuIcon />
+      </Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent className="min-w-fit">
+      <DropdownMenuItem>
+        <Link href={`/${locale}`}>{translations['home']}</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link href={`/${locale}/about`}>{translations['about']}</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link href={`/${locale}/projects`}>{translations['projects']}</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link href={`/${locale}/contact`}>{translations['contact']}</Link>
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+);

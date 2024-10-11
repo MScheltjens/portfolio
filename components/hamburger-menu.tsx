@@ -11,7 +11,7 @@ import { NavProps } from './header';
 
 export const HamburgerMenu = ({ locale, translations }: NavProps) => (
   <DropdownMenu>
-    <DropdownMenuTrigger asChild className="sm:block">
+    <DropdownMenuTrigger asChild className="md:hidden">
       <Button variant="link" size="icon">
         <MenuIcon />
       </Button>

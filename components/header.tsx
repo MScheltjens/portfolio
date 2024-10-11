@@ -14,13 +14,13 @@ export const Header = ({ translations, locale }: NavProps) => (
   <header className="fixed inset-x-0 top-0 z-50 border border-b-primary bg-background/75 py-2 backdrop-blur-sm lg:py-4">
     <div className="container flex max-w-5xl items-center justify-between">
       <h2 className="hidden scroll-m-20 pb-2 pr-3 text-3xl tracking-wide first:mt-0 md:block">
-        MS<span className="text-primary">.</span>
+        MS<span className="text-primary">_</span>
       </h2>
 
       <HamburgerMenu locale={locale} translations={translations} />
 
       <nav>
-        <ul className="hidden items-center gap-6 font-light text-muted-foreground sm:flex sm:gap-10">
+        <ul className="hidden items-center gap-6 font-light text-muted-foreground sm:flex sm:gap-10 md:gap-12 lg:gap-16">
           <li className="transition-colors hover:text-primary">
             <Link href={`/${locale}`}>{translations['home']}</Link>
           </li>

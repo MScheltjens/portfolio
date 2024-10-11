@@ -43,7 +43,7 @@ export const LayoutGrid = ({ cards }: Props) => {
                 card.className,
                 'relative overflow-hidden hover:cursor-pointer',
                 selected?.id === card.id
-                  ? 'absolute inset-0 z-50 m-auto flex h-2/3 w-full flex-col flex-wrap items-center justify-center rounded-lg md:w-2/3'
+                  ? 'absolute inset-0 z-50 mx-auto flex h-2/3 w-full flex-col flex-wrap items-center justify-center rounded md:w-2/3'
                   : lastSelected?.id === card.id
                     ? 'z-40 h-full w-full rounded-xl bg-white'
                     : 'h-full w-full rounded-xl bg-white'
@@ -86,7 +86,7 @@ const ImageComponent = () => (
 );
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => (
-  <div className="absolute top-0 z-[60] flex h-full w-full flex-col justify-end rounded-lg bg-transparent shadow-2xl">
+  <div className="absolute top-0 z-[60] flex h-full w-full flex-col justify-end rounded bg-transparent shadow-2xl">
     <motion.div
       initial={{
         opacity: 0

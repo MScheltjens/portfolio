@@ -60,7 +60,6 @@ export const ContactForm = ({
             type="text"
             placeholder={name}
             autoComplete="given-name"
-            className="rounded-none"
             {...register('name')}
           />
           {errors.name?.message && (
@@ -77,7 +76,6 @@ export const ContactForm = ({
             type="email"
             placeholder={email}
             autoComplete="given-email"
-            className="rounded-none"
             {...register('email')}
           />
           {errors.name?.message && (
@@ -92,7 +90,6 @@ export const ContactForm = ({
           <Textarea
             id="message"
             placeholder={message}
-            className="rounded-none"
             {...register('message')}
           />
           {errors.message?.message && (
@@ -102,15 +99,16 @@ export const ContactForm = ({
           )}
         </div>
       </div>
-
-      <Button
-        type="submit"
-        variant="default"
-        disabled={isSubmitting}
-        className="mt-4 w-full rounded-none hover:bg-accent/80 disabled:opacity-50"
-      >
-        {isSubmitting ? submitting : send}
-      </Button>
+      <div className="flex w-full">
+        <Button
+          type="submit"
+          variant="default"
+          disabled={isSubmitting}
+          className="mx-auto mt-4 min-w-48 disabled:opacity-50"
+        >
+          {isSubmitting ? submitting : send}
+        </Button>
+      </div>
     </form>
   );
 };

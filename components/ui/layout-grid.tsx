@@ -45,8 +45,8 @@ export const LayoutGrid = ({ cards }: Props) => {
                 selected?.id === card.id
                   ? 'absolute inset-0 z-50 m-auto flex h-2/3 w-full flex-col flex-wrap items-center justify-center rounded-lg md:w-2/3'
                   : lastSelected?.id === card.id
-                    ? 'z-40 h-full w-full rounded-xl bg-white'
-                    : 'h-full w-full rounded-xl bg-white'
+                    ? 'z-40 h-full w-full rounded-xl bg-white dark:bg-muted'
+                    : 'h-full w-full rounded-xl bg-white dark:bg-muted'
               )}
               layoutId={`card-${card.id}`}
             >
@@ -60,7 +60,7 @@ export const LayoutGrid = ({ cards }: Props) => {
         <motion.div
           onClick={handleOutsideClick}
           className={cn(
-            'absolute left-0 top-0 z-10 h-full w-full bg-black opacity-0',
+            'absolute left-0 top-0 z-10 h-full w-full opacity-0',
             selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
           )}
           animate={{ opacity: selected?.id ? 0.3 : 0 }}

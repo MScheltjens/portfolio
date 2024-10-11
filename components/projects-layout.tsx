@@ -5,7 +5,7 @@ import { LayoutGrid } from './ui/layout-grid';
 export const ProjectsLayout = () => <LayoutGrid cards={cards} />;
 
 const SkeletonOne = () => (
-  <div>
+  <div className="relative">
     <p className="text-xl font-bold text-white md:text-4xl">
       House in the woods
     </p>

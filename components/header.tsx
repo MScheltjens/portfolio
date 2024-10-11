@@ -11,7 +11,7 @@ export type NavProps = {
 };
 
 export const Header = ({ translations, locale }: NavProps) => (
-  <header className="fixed inset-x-0 top-0 z-50 border border-b-accent bg-background/75 py-4 backdrop-blur-sm lg:py-6">
+  <header className="fixed inset-x-0 top-0 z-50 border border-b-accent bg-background/75 py-2 backdrop-blur-sm lg:py-4">
     <div className="container flex max-w-5xl items-center justify-between">
       <h2 className="hidden scroll-m-20 pb-2 pr-3 text-3xl tracking-wide first:mt-0 md:block">
         MS<span className="text-accent">.</span>

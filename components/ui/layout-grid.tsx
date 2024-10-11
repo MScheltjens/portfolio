@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { Skeleton } from './skeleton';
 
 type Card = {
   id: number;
@@ -51,7 +52,8 @@ export const LayoutGrid = ({ cards }: Props) => {
             >
               {selected?.id === card.id && <SelectedCard selected={selected} />}
 
-              <ImageComponent card={card} />
+              {/* <ImageComponent card={card} /> */}
+              <ImageComponent />
             </motion.div>
           </div>
         ))}
@@ -68,17 +70,19 @@ export const LayoutGrid = ({ cards }: Props) => {
   );
 };
 
-const ImageComponent = ({ card }: { card: Card }) => (
-  <motion.img
-    layoutId={`image-${card.id}-image`}
-    src={card.thumbnail}
-    height="500"
-    width="500"
-    className={cn(
-      'absolute inset-0 h-full w-full object-cover object-top transition duration-200'
-    )}
-    alt="thumbnail"
-  />
+// const ImageComponent = ({ card }: { card: Card }) => (
+const ImageComponent = () => (
+  // <motion.img
+  //   layoutId={`image-${card.id}-image`}
+  //   src={card.thumbnail}
+  //   height="500"
+  //   width="500"
+  //   className={cn(
+  //     'absolute inset-0 h-full w-full object-cover object-top transition duration-200'
+  //   )}
+  //   alt="thumbnail"
+  // />
+  <Skeleton className="absolute inset-0 h-full w-full object-cover object-top" />
 );
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => (

@@ -17,7 +17,7 @@ export default async function Page({ params: { lang } }: Props) {
     <main>
       <PageHeading
         title={dictionary['projectsPage'].title}
-        description={dictionary['projectsPage'].description}
+        description={dictionary['construction'].title}
         className="container max-w-5xl pt-24 md:pt-36"
       />
       <div className="absolute left-0 top-0 h-screen w-screen">

@@ -17,6 +17,9 @@ export default async function Page({ params: { lang } }: Props) {
         title={dictionary['aboutPage'].title}
         description={dictionary['aboutPage'].description}
       />
+      <p className="mt-12 text-xl capitalize">
+        {dictionary['construction'].title}
+      </p>
     </main>
   );
 }

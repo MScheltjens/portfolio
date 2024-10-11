@@ -32,5 +32,8 @@
       "success": "Message sent successfully!",
       "error": "An error occurred. Please try again."
     }
+  },
+  "construction": {
+    "title": "Under Construction..."
   }
 }

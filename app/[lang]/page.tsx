@@ -13,10 +13,7 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <main className="container max-w-4xl py-24 md:py-36">
-      <Intro
-        title1={dictionary['intro'].title1}
-        title2={dictionary['intro'].title2}
-      />
+      <Intro {...dictionary['intro']} />
     </main>
   );
 }

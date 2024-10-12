@@ -21,13 +21,13 @@ export default async function Page({ params: { lang } }: Props) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <main className="container pt-24 md:pt-36">
+    <main className="container max-w-5xl py-24 md:py-36 lg:max-w-6xl">
       <PageHeading
         title={dictionary['projectsPage'].title}
         description={dictionary['projectsPage'].description}
       />
       <section className="sm:px-6">
-        <BentoGrid className="mx-auto mt-12 max-w-6xl lg:grid-rows-3">
+        <BentoGrid className="mt-6 w-full lg:grid-rows-3">
           {features.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
           ))}

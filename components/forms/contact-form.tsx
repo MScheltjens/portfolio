@@ -49,7 +49,7 @@ export const ContactForm = ({
   };
 
   return (
-    <Card className="mt-6">
+    <Card className="mx-auto mt-6 max-w-4xl">
       <CardContent>
         <form
           onSubmit={handleSubmit(onSubmit)}

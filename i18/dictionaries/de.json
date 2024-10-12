@@ -1,7 +1,8 @@
 {
   "intro": {
     "title1": "Full Stack",
-    "title2": "Entwickler"
+    "title2": "Entwickler",
+    "download": "Lebenslauf herunterladen"
   },
   "navigation": {
     "home": "Startseite",
@@ -31,5 +32,8 @@
       "success": "Nachricht erfolgreich gesendet!",
       "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
     }
+  },
+  "construction": {
+    "title": "In Bearbeitung..."
   }
 }

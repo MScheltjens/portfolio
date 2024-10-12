@@ -1,4 +1,5 @@
 import { PageHeading } from '@/components/page-heading';
+import { Skeleton } from '@/components/ui/skeleton';
 import { Locale } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 
@@ -17,6 +18,13 @@ export default async function Page({ params: { lang } }: Props) {
         title={dictionary['aboutPage'].title}
         description={dictionary['aboutPage'].description}
       />
+      <Skeleton className="flex h-48 items-center justify-center">
+        <div>
+          <p className="mt-12 w-full text-xl capitalize">
+            {dictionary['construction'].title}
+          </p>
+        </div>
+      </Skeleton>
     </main>
   );
 }

@@ -1,7 +1,8 @@
 {
   "intro": {
     "title1": "Full Stack",
-    "title2": "Developer"
+    "title2": "Developer",
+    "download": "Download my resume"
   },
   "navigation": {
     "home": "Home",
@@ -31,5 +32,8 @@
       "success": "Message sent successfully!",
       "error": "An error occurred. Please try again."
     }
+  },
+  "construction": {
+    "title": "Under Construction..."
   }
 }

@@ -1,4 +1,4 @@
-import { Intro } from '@/components/Intro';
+import { Hero } from '@/components/hero';
 import { Locale } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 
@@ -13,7 +13,9 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <main className="container max-w-4xl py-24 md:py-36">
-      <Intro {...dictionary['intro']} />
+      <section>
+        <Hero {...dictionary['homePage']} />
+      </section>
     </main>
   );
 }

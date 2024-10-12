@@ -26,11 +26,11 @@ export default async function Page({ params: { lang } }: Props) {
         title={dictionary['projectsPage'].title}
         description={dictionary['projectsPage'].description}
       />
-      <BentoGrid className="lg:grid-rows-3">
+      <BentoGrid className="mt-12 lg:grid-rows-3">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}
-      </BentoGrid>{' '}
+      </BentoGrid>
     </main>
   );
 }

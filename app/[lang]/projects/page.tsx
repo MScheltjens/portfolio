@@ -27,7 +27,7 @@ export default async function Page({ params: { lang } }: Props) {
         description={dictionary['projectsPage'].description}
       />
       <section className="sm:px-6">
-        <BentoGrid className="mt-12 max-w-5xl lg:grid-rows-3">
+        <BentoGrid className="mx-auto mt-12 max-w-6xl lg:grid-rows-3">
           {features.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
           ))}

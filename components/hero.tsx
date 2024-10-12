@@ -12,21 +12,21 @@ export const Hero = ({
   download,
   description
 }: Dictionary['homePage']) => (
-  <Card className="mx-auto flex flex-col-reverse justify-around gap-x-10 gap-y-4 p-2 md:flex-row md:items-center">
+  <Card className="flex flex-col-reverse justify-around md:flex-row md:items-center">
     <div className="flex flex-1 flex-col justify-between gap-y-3">
       <CardHeader>
-        <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-6xl">
+        <h1 className="scroll-m-20 text-4xl font-semibold tracking-tight lg:text-6xl">
           Mathias <span className="text-primary">Scheltjens</span>
         </h1>
-        <h3 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight">
+        <h3 className="mt-2 scroll-m-20 text-2xl tracking-tight">
           <span className="text-primary">{title1}</span> <span>{title2}</span>
           <span className="text-primary">_</span>
         </h3>
       </CardHeader>
       <CardContent>
-        <p className="leading-7 [&:not(:first-child)]:mt-6">{description}</p>
+        <p>{description}</p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="gap-x-4">
         <IconLink href="https://github.com/MScheltjens">
           <Linkedin />
         </IconLink>
@@ -35,13 +35,14 @@ export const Hero = ({
         </IconLink>
         <Button>{download}</Button>
       </CardFooter>
-      <div className="mt-2 flex gap-3"></div>
     </div>
-    <div className="relative">
+    <div className="relative p-2">
       <Image
-        className="rounded opacity-80 grayscale"
+        className="w-full rounded opacity-80 grayscale"
         src={authorImage}
         alt="Mathias S."
+        width={220}
+        height={220}
         priority
       />
     </div>

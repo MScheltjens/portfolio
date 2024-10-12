@@ -5,9 +5,14 @@ import { Github, Linkedin } from 'lucide-react';
 import { Button } from './ui/button';
 import { Dictionary } from '@/i18/get-dictionary';
 
-export const Intro = ({ title1, title2, download }: Dictionary['intro']) => (
+export const Hero = ({
+  title1,
+  title2,
+  download,
+  description
+}: Dictionary['homePage']) => (
   <section className="mx-auto flex flex-col justify-around gap-x-10 gap-y-4 md:flex-row md:items-center">
-    <div className="flex flex-col gap-y-3">
+    <div className="flex flex-col justify-between gap-y-3">
       <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-6xl">
         Mathias <span className="text-primary">Scheltjens</span>
       </h1>
@@ -15,6 +20,7 @@ export const Intro = ({ title1, title2, download }: Dictionary['intro']) => (
         <span className="text-primary">{title1}</span> <span>{title2}</span>
         <span className="text-primary">_</span>
       </h3>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">{description}</p>
       <div className="mt-2 flex gap-3">
         <IconLink href="https://github.com/MScheltjens">
           <Linkedin />

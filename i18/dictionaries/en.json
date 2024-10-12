@@ -1,14 +1,9 @@
 {
-  "intro": {
+  "homePage": {
     "title1": "Full Stack",
     "title2": "Developer",
+    "description": "I am a Full Stack Developer with a passion for creating web applications that are both functional and beautiful.",
     "download": "Download my resume"
-  },
-  "navigation": {
-    "home": "Home",
-    "about": "About Me",
-    "projects": "Projects",
-    "contact": "Contact"
   },
   "aboutPage": {
     "title": "About Me",
@@ -21,6 +16,12 @@
   "projectsPage": {
     "title": "Projects",
     "description": "Here are some of the projects I have worked on as a front-end developer"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
   },
   "contactForm": {
     "name": "Name",

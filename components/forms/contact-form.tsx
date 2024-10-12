@@ -9,6 +9,7 @@ import { ContactFormSchema, ContactFormInputs } from './contact-form-schema';
 import { toast } from 'sonner';
 import { sendEmail } from '@/lib/actions';
 import { getDictionary } from '@/i18/get-dictionary';
+import { Card, CardContent } from '../ui/card';
 
 type Props = {
   dictionary: Awaited<ReturnType<typeof getDictionary>>['contactForm'];
@@ -48,66 +49,70 @@ export const ContactForm = ({
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="mx-auto mt-6 max-w-4xl lg:flex-auto"
-    >
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {/* Name */}
-        <div className="col-span-2 md:col-span-1">
-          <Input
-            id="name"
-            type="text"
-            placeholder={name}
-            autoComplete="given-name"
-            {...register('name')}
-          />
-          {errors.name?.message && (
-            <p className="ml-1 mt-2 text-sm text-rose-400">
-              {errors.name.message}
-            </p>
-          )}
-        </div>
+    <Card className="mt-6">
+      <CardContent>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mx-auto mt-6 max-w-4xl lg:flex-auto"
+        >
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {/* Name */}
+            <div className="col-span-2 md:col-span-1">
+              <Input
+                id="name"
+                type="text"
+                placeholder={name}
+                autoComplete="given-name"
+                {...register('name')}
+              />
+              {errors.name?.message && (
+                <p className="ml-1 mt-2 text-sm text-rose-400">
+                  {errors.name.message}
+                </p>
+              )}
+            </div>
 
-        {/* Email */}
-        <div className="col-span-2 md:col-span-1">
-          <Input
-            id="email"
-            type="email"
-            placeholder={email}
-            autoComplete="given-email"
-            {...register('email')}
-          />
-          {errors.name?.message && (
-            <p className="ml-1 mt-2 text-sm text-rose-400">
-              {errors.name.message}
-            </p>
-          )}
-        </div>
+            {/* Email */}
+            <div className="col-span-2 md:col-span-1">
+              <Input
+                id="email"
+                type="email"
+                placeholder={email}
+                autoComplete="given-email"
+                {...register('email')}
+              />
+              {errors.name?.message && (
+                <p className="ml-1 mt-2 text-sm text-rose-400">
+                  {errors.name.message}
+                </p>
+              )}
+            </div>
 
-        {/* Message */}
-        <div className="col-span-2">
-          <Textarea
-            id="message"
-            placeholder={message}
-            {...register('message')}
-          />
-          {errors.message?.message && (
-            <p className="ml-1 mt-2 text-sm text-rose-400">
-              {errors.message.message}
-            </p>
-          )}
-        </div>
-      </div>
+            {/* Message */}
+            <div className="col-span-2">
+              <Textarea
+                id="message"
+                placeholder={message}
+                {...register('message')}
+              />
+              {errors.message?.message && (
+                <p className="ml-1 mt-2 text-sm text-rose-400">
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
+          </div>
 
-      <Button
-        type="submit"
-        variant="default"
-        disabled={isSubmitting}
-        className="mt-4 w-full hover:bg-primary/50 disabled:opacity-50"
-      >
-        {isSubmitting ? submitting : send}
-      </Button>
-    </form>
+          <Button
+            type="submit"
+            variant="default"
+            disabled={isSubmitting}
+            className="mt-4 w-full hover:bg-primary/50 disabled:opacity-50"
+          >
+            {isSubmitting ? submitting : send}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
   );
 };

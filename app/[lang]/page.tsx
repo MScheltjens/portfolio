@@ -12,8 +12,10 @@ export default async function Home({ params: { lang } }: Props) {
   const dictionary = await getDictionary(lang);
 
   return (
-    // <main className="container max-w-4xl py-24 md:py-36">
-    <Hero {...dictionary['homePage']} />
-    // </main>
+    <main className="container max-w-4xl py-24 md:py-36">
+      <section>
+        <Hero {...dictionary['homePage']} />
+      </section>
+    </main>
   );
 }

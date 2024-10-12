@@ -6,6 +6,8 @@ import { type Locale, i18n } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 import { Header } from '@/components/header';
 import { Providers } from '@/components/providers';
+import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
+import { cn } from '@/lib/utils';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -39,6 +41,17 @@ export default async function RootLayout({
           />
           <div className="grow"> {children}</div>
         </Providers>
+        <div className="-z-50">
+          <AnimatedGridPattern
+            numSquares={30}
+            maxOpacity={0.1}
+            duration={3}
+            className={cn(
+              '[mask-image:radial-gradient(500px_circle_at_center,white)]',
+              'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12'
+            )}
+          />
+        </div>
       </body>
     </html>
   );

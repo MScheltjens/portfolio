@@ -36,7 +36,7 @@ export const Hero = ({
         <Button>{download}</Button>
       </CardFooter>
     </div>
-    <div className="relative md:mr-6">
+    <div className="relative md:p-2 lg:p-6">
       <Image
         className="w-full rounded-xl rounded-b-none opacity-80 grayscale md:rounded-b-xl"
         src={authorImage}

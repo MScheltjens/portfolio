@@ -38,7 +38,8 @@ export const Hero = ({
           className={buttonVariants()}
           href="../public/files/FSD-Mathias-Scheltjens.pdf"
           target="_blank"
-          download
+          rel="noopener noreferrer"
+          locale={false}
         >
           {download}
         </Link>

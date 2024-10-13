@@ -33,7 +33,11 @@ export function middleware(request: NextRequest) {
     [
       // '/manifest.json',
       // '/favicon.ico',
-      '/images/me.jpeg'
+      '/images/me.jpeg',
+      '/images/gizmo.jpg',
+      '/images/me2.jpg',
+      '/images/megizmo.jpg',
+      '/files/MathiasS-cv.pdf'
       // Your other files in `public`
     ].includes(pathname)
   )

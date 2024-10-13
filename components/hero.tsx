@@ -37,7 +37,7 @@ export const Hero = ({
         <Link
           className={buttonVariants()}
           href="/files/MathiasS-cv.pdf"
-          download
+          target="_blank"
         >
           {download}
         </Link>

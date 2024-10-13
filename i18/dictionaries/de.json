@@ -8,7 +8,25 @@
 
   "aboutPage": {
     "title": "Über mich",
-    "description": "Ich bin ein Full Stack Entwickler mit einer Leidenschaft für die Erstellung von Webanwendungen, die funktional und schön sind. Ich habe Erfahrung in der Front-End- und Back-End-Entwicklung und bin immer auf der Suche nach neuen Technologien und der Verbesserung meiner Fähigkeiten."
+    "description": "Eine kleine Zusammenfassung meines Verhaltens auf technischer und persönlicher Ebene",
+    "tabs": {
+      "technical": "Technisch",
+      "personal": "Persönlich"
+    },
+    "profession": {
+      "title": "Berufsbezogene Fähigkeiten",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Datenbanken",
+      "tools": "Werkzeuge",
+      "communication": "Kommunikation",
+      "teamwork": "Teamarbeit",
+      "problemSolving": "Problemlösung",
+      "timeManagement": "Zeitmanagement"
+    },
+    "personal": {
+      "title": "Persönliches Leben"
+    }
   },
   "projectsPage": {
     "title": "Projekte",
@@ -16,24 +34,24 @@
   },
   "contactPage": {
     "title": "Kontaktiere mich",
-    "description": "Wenn Sie Fragen haben oder zusammenarbeiten möchten, zögern Sie bitte nicht, mich zu kontaktieren."
+    "description": "Wenn Sie Fragen haben oder zusammenarbeiten möchten, zögern Sie bitte nicht, mich zu kontaktieren.",
+    "contactForm": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Senden",
+      "submitting": "Senden...",
+      "toast": {
+        "success": "Nachricht erfolgreich gesendet!",
+        "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+      }
+    }
   },
   "navigation": {
     "home": "Startseite",
     "about": "Über mich",
     "projects": "Projekte",
     "contact": "Kontakt"
-  },
-  "contactForm": {
-    "name": "Name",
-    "email": "E-Mail",
-    "message": "Nachricht",
-    "send": "Senden",
-    "submitting": "Senden...",
-    "toast": {
-      "success": "Nachricht erfolgreich gesendet!",
-      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
-    }
   },
   "construction": {
     "title": "In Bearbeitung..."

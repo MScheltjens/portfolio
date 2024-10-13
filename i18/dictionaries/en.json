@@ -7,11 +7,40 @@
   },
   "aboutPage": {
     "title": "About Me",
-    "description": "I am a Full Stack Developer with a passion for creating web applications that are both functional and beautiful. I have experience in both front-end and back-end development, and I am always looking to learn new technologies and improve my skills."
+    "description": "Eine kleine Zusammenfassung meines Verhaltens auf technischer und persönlicher Ebene",
+    "tabs": {
+      "technical": "Technical",
+      "personal": "Personal"
+    },
+    "profession": {
+      "title": "Profession related skills",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "tools": "Tools",
+      "communication": "Communication",
+      "teamwork": "Teamwork",
+      "problemSolving": "Problem Solving",
+      "timeManagement": "Time Management"
+    },
+    "personal": {
+      "title": "Personal life"
+    }
   },
   "contactPage": {
     "title": "Contact Me",
-    "description": "If you have any questions or would like to work together, please feel free to contact me. "
+    "description": "If you have any questions or would like to work together, please feel free to contact me.",
+    "contactForm": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "submitting": "Sending...",
+      "toast": {
+        "success": "Message sent successfully!",
+        "error": "An error occurred. Please try again."
+      }
+    }
   },
   "projectsPage": {
     "title": "Projects",
@@ -22,17 +51,6 @@
     "about": "About Me",
     "projects": "Projects",
     "contact": "Contact"
-  },
-  "contactForm": {
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send",
-    "submitting": "Sending...",
-    "toast": {
-      "success": "Message sent successfully!",
-      "error": "An error occurred. Please try again."
-    }
   },
   "construction": {
     "title": "Under Construction..."

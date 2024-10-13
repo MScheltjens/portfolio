@@ -10,16 +10,13 @@ type Props = {
 };
 
 export default async function Page({ params: { lang } }: Props) {
-  const dictionary = await getDictionary(lang);
+  const { contactPage: contact } = await getDictionary(lang);
 
   return (
     <>
-      <PageHeading
-        title={dictionary['contactPage'].title}
-        description={dictionary['contactPage'].description}
-      />
+      <PageHeading title={contact.title} description={contact.description} />
       <section className="sm:px-6">
-        <ContactForm dictionary={dictionary['contactForm']} />
+        <ContactForm dictionary={contact.contactForm} />
       </section>
     </>
   );

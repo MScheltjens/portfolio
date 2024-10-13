@@ -18,14 +18,11 @@ type Props = {
 };
 
 export default async function Page({ params: { lang } }: Props) {
-  const dictionary = await getDictionary(lang);
+  const { projectsPage: projects } = await getDictionary(lang);
 
   return (
     <>
-      <PageHeading
-        title={dictionary['projectsPage'].title}
-        description={dictionary['projectsPage'].description}
-      />
+      <PageHeading title={projects.title} description={projects.description} />
       <section className="sm:px-6">
         <BentoGrid className="mt-6 w-full lg:grid-rows-3">
           {features.map((feature) => (

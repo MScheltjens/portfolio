@@ -32,7 +32,6 @@ export default async function InformativeLayout({
         {children}
       </main>
       <Footer />
-      {/* <div className="-z-50"> */}
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.1}
@@ -42,7 +41,6 @@ export default async function InformativeLayout({
           'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12'
         )}
       />
-      {/* </div> */}
     </div>
   );
 }

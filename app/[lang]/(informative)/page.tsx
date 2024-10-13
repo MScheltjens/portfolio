@@ -9,11 +9,11 @@ type Props = {
 };
 
 export default async function Home({ params: { lang } }: Props) {
-  const dictionary = await getDictionary(lang);
+  const { homePage } = await getDictionary(lang);
 
   return (
     <section>
-      <Hero {...dictionary['homePage']} />
+      <Hero {...homePage} />
     </section>
   );
 }

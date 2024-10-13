@@ -5,6 +5,10 @@ import { Locale } from '@/i18/config';
 import { getDictionary } from '@/i18/get-dictionary';
 import { cn } from '@/lib/utils';
 
+{
+  /* this layout is created for all the informative pages, in case I want to scale up (ex: auth etc) I can create another (auth) folder with another layout */
+}
+
 export default async function InformativeLayout({
   children,
   params

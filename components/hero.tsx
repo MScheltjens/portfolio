@@ -36,10 +36,9 @@ export const Hero = ({
         </IconLink>
         <Link
           className={buttonVariants()}
-          href="../public/files/FSD-Mathias-Scheltjens.pdf"
+          href="/FSD-Mathias-Scheltjens.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          locale={false}
         >
           {download}
         </Link>

@@ -12,7 +12,9 @@ import { getDictionary } from '@/i18/get-dictionary';
 import { Card, CardContent } from '../ui/card';
 
 type Props = {
-  dictionary: Awaited<ReturnType<typeof getDictionary>>['contactForm'];
+  dictionary: Awaited<
+    ReturnType<typeof getDictionary>
+  >['contactPage']['contactForm'];
 };
 
 export const ContactForm = ({

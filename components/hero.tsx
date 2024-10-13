@@ -2,15 +2,16 @@ import Image from 'next/image';
 import authorImage from '@/public/images/me.jpeg';
 import { IconLink } from './icon-link';
 import { Github, Linkedin } from 'lucide-react';
-import { Button } from './ui/button';
 import { Dictionary } from '@/i18/get-dictionary';
 import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
+import Link from 'next/link';
+import { buttonVariants } from './ui/button';
 
 export const Hero = ({
   title1,
   title2,
-  download,
-  description
+  description,
+  download
 }: Dictionary['homePage']) => (
   <Card className="flex flex-col-reverse justify-around md:flex-row md:items-center">
     <div className="flex flex-1 flex-col justify-between gap-y-3">
@@ -33,7 +34,14 @@ export const Hero = ({
         <IconLink href="https://www.linkedin.com/in/mathias-scheltjens/">
           <Github />
         </IconLink>
-        <Button>{download}</Button>
+        <Link
+          className={buttonVariants()}
+          href="/files/FSD-Mathias-Scheltjens.pdf"
+          target="_blank"
+          // download
+        >
+          {download}
+        </Link>
       </CardFooter>
     </div>
     <div className="relative md:p-2 lg:p-6">

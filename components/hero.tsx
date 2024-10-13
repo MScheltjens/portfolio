@@ -38,7 +38,7 @@ export const Hero = ({
           className={buttonVariants()}
           href="/files/FSD-Mathias-Scheltjens.pdf"
           target="_blank"
-          // download
+          download
         >
           {download}
         </Link>

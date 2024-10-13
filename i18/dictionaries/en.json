@@ -7,7 +7,7 @@
   },
   "aboutPage": {
     "title": "About Me",
-    "description": "Eine kleine Zusammenfassung meines Verhaltens auf technischer und persönlicher Ebene",
+    "description": "A small summary of my technical skills and personal life",
     "tabs": {
       "technical": "Technical",
       "personal": "Personal"

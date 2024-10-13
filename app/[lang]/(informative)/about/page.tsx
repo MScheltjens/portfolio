@@ -29,7 +29,7 @@ export default async function Page({ params: { lang } }: Props) {
       />
 
       <section className="mt-6 sm:px-6">
-        <Tabs defaultValue="account" className="w-full">
+        <Tabs defaultValue="technical" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="technical">Technical</TabsTrigger>
             <TabsTrigger value="personal">Personal</TabsTrigger>

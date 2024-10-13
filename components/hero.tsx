@@ -26,7 +26,7 @@ export const Hero = ({
       <CardContent>
         <p>{description}</p>
       </CardContent>
-      <CardFooter className="gap-x-4">
+      <CardFooter className="gap-x-2 md:gap-x-4">
         <IconLink href="https://github.com/MScheltjens">
           <Linkedin />
         </IconLink>

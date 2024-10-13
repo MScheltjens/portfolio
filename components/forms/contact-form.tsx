@@ -8,13 +8,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ContactFormSchema, ContactFormInputs } from './contact-form-schema';
 import { toast } from 'sonner';
 import { sendEmail } from '@/lib/actions';
-import { getDictionary } from '@/i18/get-dictionary';
+import { Dictionary } from '@/i18/get-dictionary';
 import { Card, CardContent } from '../ui/card';
 
 type Props = {
-  dictionary: Awaited<
-    ReturnType<typeof getDictionary>
-  >['contactPage']['contactForm'];
+  dictionary: Dictionary['contactPage']['contactForm'];
 };
 
 export const ContactForm = ({

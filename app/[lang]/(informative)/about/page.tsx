@@ -18,6 +18,9 @@ export default async function Page({ params: { lang } }: Props) {
       <PageHeading title={about.title} description={about.description} />
 
       <section className="mt-6 sm:px-6">
+        <p className="my-4 font-bold text-red-500">
+          ...THIS PAGE IS STILL UNDER CONSTRUCTION...
+        </p>
         <Tabs defaultValue="technical" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="technical">{about.tabs.technical}</TabsTrigger>

@@ -23,6 +23,9 @@ export default async function Page({ params: { lang } }: Props) {
   return (
     <>
       <PageHeading title={projects.title} description={projects.description} />
+      <p className="my-4 font-bold text-red-500">
+        ...THIS PAGE IS STILL UNDER CONSTRUCTION...
+      </p>
       <section className="sm:px-6">
         <BentoGrid className="mt-6 w-full lg:grid-rows-3">
           {features.map((feature) => (
@@ -37,8 +40,8 @@ export default async function Page({ params: { lang } }: Props) {
 const features = [
   {
     Icon: FileTextIcon,
-    name: 'Save your files',
-    description: 'We automatically save your files as you type.',
+    name: 'Dummy',
+    description: 'dummy-description',
     href: '/',
     cta: 'Learn more',
     background: (
@@ -52,8 +55,8 @@ const features = [
   },
   {
     Icon: InputIcon,
-    name: 'Full text search',
-    description: 'Search through all your files in one place.',
+    name: 'Dummy',
+    description: 'dummy-description',
     href: '/',
     cta: 'Learn more',
     background: (
@@ -67,8 +70,8 @@ const features = [
   },
   {
     Icon: GlobeIcon,
-    name: 'Multilingual',
-    description: 'Supports 100+ languages and counting.',
+    name: 'Dummy',
+    description: 'dummy-description',
     href: '/',
     cta: 'Learn more',
     background: (
@@ -82,8 +85,8 @@ const features = [
   },
   {
     Icon: CalendarIcon,
-    name: 'Calendar',
-    description: 'Use the calendar to filter your files by date.',
+    name: 'Dummy',
+    description: 'dummy-description',
     href: '/',
     cta: 'Learn more',
     background: (
@@ -97,9 +100,8 @@ const features = [
   },
   {
     Icon: BellIcon,
-    name: 'Notifications',
-    description:
-      'Get notified when someone shares a file or mentions you in a comment.',
+    name: 'Dummy',
+    description: 'dummy-description',
     href: '/',
     cta: 'Learn more',
     background: (

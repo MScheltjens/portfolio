@@ -1,0 +1,55 @@
+{
+  "homePage": {
+    "title1": "Full Stack",
+    "title2": "",
+    "description": "Je suis un développeur Full Stack passionné par la création d'applications web à la fois fonctionnelles et esthétiques.",
+    "download": "Télécharger mon CV"
+  },
+  "aboutPage": {
+    "title": "À propos de moi",
+    "description": "Un petit résumé de mes compétences techniques et de ma vie personnelle",
+    "tabs": {
+      "technical": "Technique",
+      "personal": "Personnel"
+    },
+    "profession": {
+      "title": "Compétences professionnelles",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de données",
+      "tools": "Outils",
+      "communication": "Communication",
+      "teamwork": "Travail d'équipe",
+      "problemSolving": "Résolution de problèmes",
+      "timeManagement": "Gestion du temps"
+    },
+    "personal": {
+      "title": "Vie personnelle"
+    }
+  },
+  "contactPage": {
+    "title": "Contactez-moi",
+    "description": "Si vous avez des questions ou souhaitez travailler ensemble, n'hésitez pas à me contacter.",
+    "contactForm": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer",
+      "submitting": "Envoi...",
+      "toast": {
+        "success": "Message envoyé avec succès !",
+        "error": "Une erreur est survenue. Veuillez réessayer."
+      }
+    }
+  },
+  "projectsPage": {
+    "title": "Projets",
+    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé en tant que développeur front-end"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos de moi",
+    "projects": "Projets",
+    "contact": "Contact"
+  }
+}

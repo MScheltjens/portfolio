@@ -1,0 +1,58 @@
+{
+  "homePage": {
+    "title1": "Full Stack",
+    "title2": "",
+    "description": "Ik ben een Full Stack Developer met een passie voor het creëren van webapplicaties die zowel functioneel als mooi zijn.",
+    "download": "Download mijn cv"
+  },
+  "aboutPage": {
+    "title": "Over Mij",
+    "description": "Een korte samenvatting van mijn technische vaardigheden en persoonlijk leven",
+    "tabs": {
+      "technical": "Technisch",
+      "personal": "Persoonlijk"
+    },
+    "profession": {
+      "title": "Beroepsgerelateerde vaardigheden",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "tools": "Tools",
+      "communication": "Communicatie",
+      "teamwork": "Teamwerk",
+      "problemSolving": "Probleemoplossend vermogen",
+      "timeManagement": "Tijdbeheer"
+    },
+    "personal": {
+      "title": "Persoonlijk leven"
+    }
+  },
+  "contactPage": {
+    "title": "Contacteer Mij",
+    "description": "Als je vragen hebt of wilt samenwerken, neem dan gerust contact met mij op.",
+    "contactForm": {
+      "name": "Naam",
+      "email": "E-mail",
+      "message": "Bericht",
+      "send": "Versturen",
+      "submitting": "Verzenden...",
+      "toast": {
+        "success": "Bericht succesvol verzonden!",
+        "error": "Er is een fout opgetreden. Probeer het opnieuw."
+      }
+    }
+  },
+  "projectsPage": {
+    "title": "Projecten",
+    "description": "Hier zijn enkele van de projecten waar ik als front-end ontwikkelaar aan heb gewerkt"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "Over Mij",
+    "projects": "Projecten",
+    "contact": "Contact"
+  },
+  "construction": {
+    "title": "In Aanbouw..."
+  }
+}

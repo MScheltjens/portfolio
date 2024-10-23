@@ -1,4 +1,3 @@
 {
-  "*/**/*.{js,jsx,ts,tsx}": ["prettier --write", "eslint", "eslint --fix"],
-  "*/**/*.{json,css,md}": ["prettier --write"]
+  "*.{ts,tsx,js,json}": "pnpm validate"
 }

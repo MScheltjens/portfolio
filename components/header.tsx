@@ -1,12 +1,12 @@
-import { Locale } from '@/i18/config';
-import { LocaleSwitcher } from './locale-switcher';
-import { ModeToggler } from './mode-toggler';
-import Link from 'next/link';
-import { Dictionary } from '@/i18/get-dictionary';
-import { HamburgerMenu } from './hamburger-menu';
+import { type Locale } from "@/i18/config";
+import { LocaleSwitcher } from "./locale-switcher";
+import { ModeToggler } from "./mode-toggler";
+import Link from "next/link";
+import { type Dictionary } from "@/i18/get-dictionary";
+import { HamburgerMenu } from "./hamburger-menu";
 
 export type NavProps = {
-  translations: Dictionary['navigation'];
+  translations: Dictionary["navigation"];
   locale: Locale;
 };
 
@@ -22,16 +22,16 @@ export const Header = ({ translations, locale }: NavProps) => (
       <nav>
         <ul className="hidden items-center gap-6 font-light text-muted-foreground sm:flex sm:gap-10">
           <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}`}>{translations['home']}</Link>
+            <Link href={`/${locale}`}>{translations["home"]}</Link>
           </li>
           <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}/about`}>{translations['about']}</Link>
+            <Link href={`/${locale}/about`}>{translations["about"]}</Link>
           </li>
           <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}/projects`}>{translations['projects']}</Link>
+            <Link href={`/${locale}/projects`}>{translations["projects"]}</Link>
           </li>
           <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}/contact`}>{translations['contact']}</Link>
+            <Link href={`/${locale}/contact`}>{translations["contact"]}</Link>
           </li>
         </ul>
       </nav>

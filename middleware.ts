@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-import { i18n } from './i18/config';
+import { i18n } from "./i18/config";
 
-import { match as matchLocale } from '@formatjs/intl-localematcher';
-import Negotiator from 'negotiator';
+import { match as matchLocale } from "@formatjs/intl-localematcher";
+import Negotiator from "negotiator";
 
 function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers
@@ -16,7 +16,7 @@ function getLocale(request: NextRequest): string | undefined {
 
   // Use negotiator and intl-localematcher to get best locale
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
+    locales,
   );
 
   const locale = matchLocale(languages, locales, i18n.defaultLocale);
@@ -33,11 +33,11 @@ export function middleware(request: NextRequest) {
     [
       // '/manifest.json',
       // '/favicon.ico',
-      '/images/me.jpeg',
-      '/images/gizmo.jpg',
-      '/images/me2.jpg',
-      '/images/megizmo.jpg',
-      '/files/MathiasS-cv.pdf'
+      "/images/me.jpeg",
+      "/images/gizmo.jpg",
+      "/images/me2.jpg",
+      "/images/megizmo.jpg",
+      "/files/MathiasS-cv.pdf",
       // Your other files in `public`
     ].includes(pathname)
   )
@@ -45,7 +45,8 @@ export function middleware(request: NextRequest) {
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    (locale) =>
+      !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
 
   // Redirect if there is no locale
@@ -56,14 +57,14 @@ export function middleware(request: NextRequest) {
     // The new URL is now /en-US/products
     return NextResponse.redirect(
       new URL(
-        `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-        request.url
-      )
+        `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
+        request.url,
+      ),
     );
   }
 }
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

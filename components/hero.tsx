@@ -1,18 +1,18 @@
-import Image from 'next/image';
-import authorImage from '@/public/images/me.jpeg';
-import { IconLink } from './icon-link';
-import { Github, Linkedin } from 'lucide-react';
-import { Dictionary } from '@/i18/get-dictionary';
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
-import Link from 'next/link';
-import { buttonVariants } from './ui/button';
+import Image from "next/image";
+import authorImage from "@/public/images/me.jpeg";
+import { IconLink } from "./icon-link";
+import { Github, Linkedin } from "lucide-react";
+import type { Dictionary } from "@/i18/get-dictionary";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 export const Hero = ({
   title1,
   title2,
   description,
-  download
-}: Dictionary['homePage']) => (
+  download,
+}: Dictionary["homePage"]) => (
   <Card className="flex flex-col-reverse justify-around md:flex-row md:items-center">
     <div className="flex flex-1 flex-col justify-between gap-y-3">
       <CardHeader>

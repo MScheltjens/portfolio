@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Lightbulb, LightbulbOff } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { Lightbulb, LightbulbOff } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const ModeToggler = () => {
   const { theme, setTheme } = useTheme();
@@ -21,9 +21,9 @@ export const ModeToggler = () => {
       <Button
         size="icon"
         variant="link"
-        onClick={() => setTheme(theme && theme === 'light' ? 'dark' : 'light')}
+        onClick={() => setTheme(theme && theme === "light" ? "dark" : "light")}
       >
-        {theme && theme === 'dark' ? <Lightbulb /> : <LightbulbOff />}
+        {theme && theme === "dark" ? <Lightbulb /> : <LightbulbOff />}
       </Button>
     )
   );

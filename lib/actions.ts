@@ -1,11 +1,11 @@
-'use server';
+"use server";
 
 import {
-  ContactFormInputs,
-  ContactFormSchema
-} from '@/components/forms/contact-form-schema';
-import { Resend } from 'resend';
-import { ContactFormEmail } from '@/emails/contact-form-email';
+  type ContactFormInputs,
+  ContactFormSchema,
+} from "@/components/forms/contact-form-schema";
+import { Resend } from "resend";
+import { ContactFormEmail } from "@/emails/contact-form-email";
 
 export const sendEmail = async (data: ContactFormInputs) => {
   // instantiate a new Resend instance with the API key
@@ -20,16 +20,16 @@ export const sendEmail = async (data: ContactFormInputs) => {
   try {
     const { name, email, message } = result.data;
     const { data, error } = await resend.emails.send({
-      from: 'mathias@ms-gizmo.dev',
+      from: "mathias@ms-gizmo.dev",
       to: [email],
-      cc: ['mathias.scheltjens@gmail.com'],
-      subject: 'Contact form submission',
+      cc: ["mathias.scheltjens@gmail.com"],
+      subject: "Contact form submission",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      react: ContactFormEmail({ name, email, message })
+      react: ContactFormEmail({ name, email, message }),
     });
 
     if (!data || error) {
-      return { error: 'Failed to send email' };
+      return { error: "Failed to send email" };
     }
   } catch (error) {
     return { error };

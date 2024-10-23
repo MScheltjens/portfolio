@@ -1,8 +1,8 @@
-import { PageHeading } from '@/components/page-heading';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Locale } from '@/i18/config';
-import { getDictionary } from '@/i18/get-dictionary';
+import { PageHeading } from "@/components/page-heading";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { type Locale } from "@/i18/config";
+import { getDictionary } from "@/i18/get-dictionary";
 
 type Props = {
   params: {

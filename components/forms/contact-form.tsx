@@ -1,18 +1,21 @@
-'use client';
+"use client";
 
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { ContactFormSchema, ContactFormInputs } from './contact-form-schema';
-import { toast } from 'sonner';
-import { sendEmail } from '@/lib/actions';
-import { Dictionary } from '@/i18/get-dictionary';
-import { Card, CardContent } from '../ui/card';
+import { type SubmitHandler, useForm } from "react-hook-form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  ContactFormSchema,
+  type ContactFormInputs,
+} from "./contact-form-schema";
+import { toast } from "sonner";
+import { sendEmail } from "@/lib/actions";
+import { type Dictionary } from "@/i18/get-dictionary";
+import { Card, CardContent } from "../ui/card";
 
 type Props = {
-  dictionary: Dictionary['contactPage']['contactForm'];
+  dictionary: Dictionary["contactPage"]["contactForm"];
 };
 
 export const ContactForm = ({
@@ -22,19 +25,19 @@ export const ContactForm = ({
     message,
     toast: { error, success },
     send,
-    submitting
-  }
+    submitting,
+  },
 }: Props) => {
   const form = useForm<ContactFormInputs>({
     resolver: zodResolver(ContactFormSchema),
-    defaultValues: { name: '', email: '', message: '' }
+    defaultValues: { name: "", email: "", message: "" },
   });
 
   const {
     reset,
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    formState: { errors, isSubmitting },
   } = form;
 
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
@@ -63,7 +66,7 @@ export const ContactForm = ({
                 type="text"
                 placeholder={name}
                 autoComplete="given-name"
-                {...register('name')}
+                {...register("name")}
               />
               {errors.name?.message && (
                 <p className="ml-1 mt-2 text-sm text-rose-400">
@@ -79,7 +82,7 @@ export const ContactForm = ({
                 type="email"
                 placeholder={email}
                 autoComplete="given-email"
-                {...register('email')}
+                {...register("email")}
               />
               {errors.name?.message && (
                 <p className="ml-1 mt-2 text-sm text-rose-400">
@@ -93,7 +96,7 @@ export const ContactForm = ({
               <Textarea
                 id="message"
                 placeholder={message}
-                {...register('message')}
+                {...register("message")}
               />
               {errors.message?.message && (
                 <p className="ml-1 mt-2 text-sm text-rose-400">

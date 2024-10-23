@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { ThemeProvider, useTheme } from 'next-themes';
-import { Toaster } from './ui/sonner';
+import { ThemeProvider, useTheme } from "next-themes";
+import { Toaster } from "./ui/sonner";
 
 export const Providers = ({ children }: { children: React.ReactNode }) => (
   <ThemeProvider
@@ -20,7 +20,7 @@ const ToastProvider = () => {
   return (
     <Toaster
       position="top-right"
-      theme={resolvedTheme === 'dark' ? 'dark' : 'light'}
+      theme={resolvedTheme === "dark" ? "dark" : "light"}
       closeButton
     />
   );

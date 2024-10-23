@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
-import { usePathname } from 'next/navigation';
-import { i18n, Locale } from '@/i18/config';
-import Link from 'next/link';
-import { Globe } from 'lucide-react';
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { usePathname } from "next/navigation";
+import { i18n, type Locale } from "@/i18/config";
+import Link from "next/link";
+import { Globe } from "lucide-react";
 
 export const LocaleSwitcher = () => {
   const pathName = usePathname();
   const redirectedPathName = (locale: Locale) => {
-    if (!pathName) return '/';
-    const segments = pathName.split('/');
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
     segments[1] = locale;
-    return segments.join('/');
+    return segments.join("/");
   };
 
   return (

@@ -1,7 +1,7 @@
-import { ContactForm } from '@/components/forms/contact-form';
-import { PageHeading } from '@/components/page-heading';
-import { Locale } from '@/i18/config';
-import { getDictionary } from '@/i18/get-dictionary';
+import { ContactForm } from "@/components/forms/contact-form";
+import { PageHeading } from "@/components/page-heading";
+import { type Locale } from "@/i18/config";
+import { getDictionary } from "@/i18/get-dictionary";
 
 type Props = {
   params: {

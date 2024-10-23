@@ -1,10 +1,10 @@
-import '../globals.css';
+import "../globals.css";
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import { i18n, type Locale } from '@/i18/config';
+import { i18n, type Locale } from "@/i18/config";
 
-import { Providers } from '@/components/providers';
+import { Providers } from "@/components/providers";
 
 // build all pages for all locales at build time
 export async function generateStaticParams() {
@@ -12,12 +12,12 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Mathias S. | Portfolio'
+  title: "Mathias S. | Portfolio",
 };
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { lang: Locale };

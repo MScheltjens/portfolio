@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { buttonVariants } from './ui/button';
+import React from "react";
+import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 type Props = {
   href: string;
@@ -9,6 +9,6 @@ type Props = {
 
 export const IconLink = ({ href, children }: Props) => (
   <Link href={href} target="_blank">
-    <div className={buttonVariants({ size: 'icon' })}>{children}</div>
+    <div className={buttonVariants({ size: "icon" })}>{children}</div>
   </Link>
 );

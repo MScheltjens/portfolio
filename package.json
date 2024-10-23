@@ -10,6 +10,7 @@
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier ./**/*.{ts,tsx,js,json,css} --check",
     "format:fix": "prettier ./**/*.{ts,tsx,js,json,css} --write",
+    "validate": "pnpm lint && pnpm format:fix",
     "prepare": "husky"
   },
   "dependencies": {

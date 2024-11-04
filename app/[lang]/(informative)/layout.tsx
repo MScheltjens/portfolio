@@ -1,7 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { type Locale } from "@/i18/config";
 import { getDictionary } from "@/i18/get-dictionary";
 import { cn } from "@/lib/utils";
 

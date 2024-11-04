@@ -6,9 +6,5 @@ export default async function Home({ params }: PageProps) {
 
   const { homePage } = await getDictionary(lang);
 
-  return (
-    <section>
-      <Hero {...homePage} />
-    </section>
-  );
+  return <Hero {...homePage} />;
 }

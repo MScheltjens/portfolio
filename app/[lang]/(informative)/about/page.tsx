@@ -1,26 +1,19 @@
 import { PageHeading } from "@/components/page-heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { type Locale } from "@/i18/config";
 import { getDictionary } from "@/i18/get-dictionary";
 
-type Props = {
-  params: {
-    lang: Locale;
-  };
-};
-
-export default async function Page({ params: { lang } }: Props) {
+export default async function Page({ params }: PageProps) {
+  const { lang } = await params;
   const { aboutPage: about } = await getDictionary(lang);
 
   return (
     <>
       <PageHeading title={about.title} description={about.description} />
-
+      <p className="my-4 font-bold text-red-500">
+        ...THIS PAGE IS STILL UNDER CONSTRUCTION...
+      </p>
       <section className="mt-6 sm:px-6">
-        <p className="my-4 font-bold text-red-500">
-          ...THIS PAGE IS STILL UNDER CONSTRUCTION...
-        </p>
         <Tabs defaultValue="technical" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="technical">{about.tabs.technical}</TabsTrigger>
@@ -30,7 +23,6 @@ export default async function Page({ params: { lang } }: Props) {
             <Card>
               <CardHeader>
                 <CardTitle>{about.profession.title}</CardTitle>
-                {/* <CardDescription>{about.technical.}</CardDescription> */}
               </CardHeader>
               <CardContent>
                 <h3>{about.profession.frontend}</h3>
@@ -40,7 +32,6 @@ export default async function Page({ params: { lang } }: Props) {
                 <h3>{about.profession.problemSolving}</h3>
                 <h3>{about.profession.timeManagement}</h3>
               </CardContent>
-              {/* <CardFooter>Footer here</CardFooter> */}
             </Card>
           </TabsContent>
           <TabsContent value="personal">

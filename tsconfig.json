@@ -23,7 +23,8 @@
       "@/i18/*": ["./i18/*"],
       "@/public/*": ["./public/*"],
       "@/emails/*": ["./emails/*"]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

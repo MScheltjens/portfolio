@@ -1,14 +1,9 @@
 import { Hero } from "@/components/hero";
-import { type Locale } from "@/i18/config";
 import { getDictionary } from "@/i18/get-dictionary";
 
-type Props = {
-  params: {
-    lang: Locale;
-  };
-};
+export default async function Home({ params }: PageProps) {
+  const { lang } = await params;
 
-export default async function Home({ params: { lang } }: Props) {
   const { homePage } = await getDictionary(lang);
 
   return (

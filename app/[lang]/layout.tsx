@@ -1,9 +1,7 @@
 import "../globals.css";
 
 import type { Metadata } from "next";
-
-import { i18n, type Locale } from "@/i18/config";
-
+import { i18n } from "@/i18/config";
 import { Providers } from "@/components/providers";
 
 // build all pages for all locales at build time
@@ -15,15 +13,10 @@ export const metadata: Metadata = {
   title: "Mathias S. | Portfolio",
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lang: Locale };
-}>) {
+export default async function RootLayout({ params, children }: LayoutProps) {
+  const { lang } = await params;
   return (
-    <html lang={params.lang} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body>
         <Providers>
           <div className="grow">{children}</div>

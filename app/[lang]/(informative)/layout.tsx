@@ -10,13 +10,11 @@ import { cn } from "@/lib/utils";
 }
 
 export default async function InformativeLayout({
-  children,
   params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lang: Locale };
-}>) {
-  const dictionary = await getDictionary(params.lang);
+  children,
+}: LayoutProps) {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
   return (
     <div className="flex min-h-screen flex-col antialiased">
       <Header
@@ -26,7 +24,7 @@ export default async function InformativeLayout({
           projects: dictionary["navigation"].projects,
           contact: dictionary["navigation"].contact,
         }}
-        locale={params.lang}
+        locale={lang}
       />
       <main className="container max-w-5xl grow py-24 md:py-36 lg:max-w-6xl">
         {children}

@@ -22,7 +22,8 @@
       "@/lib/*": ["./lib/*"],
       "@/i18/*": ["./i18/*"],
       "@/public/*": ["./public/*"],
-      "@/emails/*": ["./emails/*"]
+      "@/emails/*": ["./emails/*"],
+      "@/hooks/*": ["./hooks/*"]
     },
     "target": "ES2017"
   },

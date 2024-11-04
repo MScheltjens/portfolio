@@ -2,7 +2,6 @@
 
 import { ThemeProvider, useTheme } from "next-themes";
 import { Toaster } from "./ui/sonner";
-
 export const Providers = ({ children }: { children: React.ReactNode }) => (
   <ThemeProvider
     attribute="class"
@@ -10,6 +9,7 @@ export const Providers = ({ children }: { children: React.ReactNode }) => (
     disableTransitionOnChange
   >
     {children}
+
     <ToastProvider />
   </ThemeProvider>
 );

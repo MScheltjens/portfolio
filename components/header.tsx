@@ -1,9 +1,8 @@
 import { type Locale } from "@/i18/config";
 import { LocaleSwitcher } from "./locale-switcher";
 import { ModeToggler } from "./mode-toggler";
-import Link from "next/link";
 import { type Dictionary } from "@/i18/get-dictionary";
-import { HamburgerMenu } from "./hamburger-menu";
+import { Navigation } from "./navigation";
 
 export type NavProps = {
   translations: Dictionary["navigation"];
@@ -17,24 +16,8 @@ export const Header = ({ translations, locale }: NavProps) => (
         MS<span className="text-primary">_</span>
       </h2>
 
-      <HamburgerMenu locale={locale} translations={translations} />
-
-      <nav>
-        <ul className="hidden items-center gap-6 font-light text-muted-foreground sm:flex sm:gap-10">
-          <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}`}>{translations.home}</Link>
-          </li>
-          <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}/about`}>{translations.about}</Link>
-          </li>
-          <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}/projects`}>{translations.projects}</Link>
-          </li>
-          <li className="transition-colors hover:text-primary">
-            <Link href={`/${locale}/contact`}>{translations.contact}</Link>
-          </li>
-        </ul>
-      </nav>
+      {/* <HamburgerMenu locale={locale} translations={translations} /> */}
+      <Navigation locale={locale} translations={translations} />
 
       <div className="flex">
         <LocaleSwitcher />

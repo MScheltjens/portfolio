@@ -3,6 +3,7 @@ import { LocaleSwitcher } from "./locale-switcher";
 import { ModeToggler } from "./mode-toggler";
 import { type Dictionary } from "@/i18/get-dictionary";
 import { Navigation } from "./navigation";
+import { HamburgerMenu } from "./hamburger-menu";
 
 export type NavProps = {
   translations: Dictionary["navigation"];
@@ -16,7 +17,7 @@ export const Header = ({ translations, locale }: NavProps) => (
         MS<span className="text-primary">_</span>
       </h2>
 
-      {/* <HamburgerMenu locale={locale} translations={translations} /> */}
+      <HamburgerMenu locale={locale} translations={translations} />
       <Navigation locale={locale} translations={translations} />
 
       <div className="flex">

@@ -10,7 +10,7 @@ import {
   type ContactFormInputs,
 } from "./contact-form-schema";
 import { toast } from "sonner";
-import { sendEmail } from "@/lib/actions";
+import { sendEmail } from "@/lib/server-actions/send-mail";
 import { type Dictionary } from "@/i18/get-dictionary";
 import { Card, CardContent } from "../ui/card";
 

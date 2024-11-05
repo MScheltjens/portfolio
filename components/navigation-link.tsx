@@ -11,7 +11,7 @@ type Props = {
 };
 
 export const NavigationLink = ({ label, href, value }: Props) => {
-  // Get the active segment from the layout, Nextjs caches pages so the url may not be acurate!
+  // Get the active segment from the layout, because of the caching behaviour of Nextjs the url may not be acurate!
   const activeSegment = useSelectedLayoutSegment();
   const isActive = activeSegment === label;
 
@@ -22,7 +22,7 @@ export const NavigationLink = ({ label, href, value }: Props) => {
           className={cn(
             "cursor-pointer px-2 py-1",
             isActive &&
-              "border-b-2 border-primary text-primary transition-all ease-in-out",
+              "border-b-2 border-primary text-primary transition-all duration-300 ease-in-out",
           )}
         >
           <p>{value}</p>
